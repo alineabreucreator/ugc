@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aline Abreu | Portfólio UGC Creator</title>
+<meta name="description" content="Portfólio UGC de Aline Abreu: conteúdos com olhar criativo e estratégico que mostram por que a sua marca é a escolha ideal.">
+<meta name="theme-color" content="#F9DFCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================== CORES E MEDIDAS ===================== */
+:root{
+  /* paleta: #E85A23 laranja · #EE8E53 laranja claro · #FD8C89 salmão · #F9DFCC pêssego · #283B63 azul marinho
+     pêssego é o fundo; laranja e salmão dão os destaques; o azul aparece só em detalhes */
+  --noite:#283B63;        /* azul marinho: só detalhes (rodapé, palavra grifada, ícones) */
+  --noite-2:#283B63;
+  --creme:#F9DFCC;        /* pêssego: fundo principal */
+  --janela:#F9DFCC;       /* fundo das janelas */
+  --papel:#fdf3eb;        /* pêssego mais clarinho para os cards por cima do fundo */
+  --tinta:#283B63;        /* texto corrido */
+  --tinta-suave:#4f5a75;  /* texto secundário, num azul acinzentado */
+  --marrom:#5a2110;       /* texto por cima dos blocos laranja e salmão (bom contraste) */
+  --linha:rgba(40,59,99,.14);
+  --petroleo:#283B63;
+  --coral:#E85A23;        /* laranja forte: faixas e fundos de destaque */
+  --coral-grande:#d24f1c; /* laranja para títulos grandes sobre o pêssego (contraste) */
+  --coral-texto:#a63f17;  /* laranja escuro para textos pequenos sobre o pêssego (contraste) */
+  --laranja-botao:#c4471a;/* laranja do botão, escuro o bastante para o texto branco */
+  --amarelo:#EE8E53;      /* laranja claro */
+  --salmao:#FD8C89;
+  --amarelo-bf:#F6B13C;  /* amarelo vibrante só da barra da Black Friday: fora da paleta, para chamar o clique */
+  --vermelho-mac:#ff5f57;
+  --amarelo-mac:#febc2e;
+  --verde-mac:#28c840;
+  --raio:14px;
+  --sombra:0 30px 60px -30px rgba(166,63,23,.35);
+  --fonte-titulo:"Montserrat",system-ui,sans-serif;
+  --fonte-corpo:"Quicksand",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:130px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--fonte-corpo);font-size:17px;font-weight:500;line-height:1.6;color:var(--tinta);
+  background-color:var(--creme);
+  /* papel de parede do "computador": grade pontilhada suave sobre o pêssego */
+  background-image:radial-gradient(rgba(40,59,99,.12) 1.2px,transparent 1.5px);
+  background-size:22px 22px;
+  background-attachment:fixed;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--fonte-titulo);line-height:1.05;margin:0 0 .5em;letter-spacing:-.02em}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--petroleo);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.pular{position:absolute;left:-999px;top:8px;z-index:100;background:var(--creme);color:var(--noite);padding:10px 16px;font-weight:700}
+.pular:focus{left:8px}
+
+/* ===================== BARRA DE MENU (estilo Mac) ===================== */
+.topo{position:fixed;top:42px;left:0;right:0;z-index:50;
+  background:var(--petroleo);border-bottom:1px solid rgba(255,255,255,.08);color:var(--creme)} /* menu fixo em azul marinho */
+.topo .menu a{color:var(--creme)}
+.topo .menu a:hover{background:rgba(255,255,255,.12);color:#fff}
+.topo .sanduiche{color:var(--creme)}
+.topo-interno{height:54px;padding:0 max(20px,calc((100% - 1360px) / 2));display:flex;align-items:center;gap:18px}
+/* nome com o cargo embaixo, como na referência */
+.marca-texto{display:grid;line-height:1.05}
+.marca-texto strong{font-family:var(--fonte-titulo);font-weight:900;font-size:1.02rem;letter-spacing:-.01em;text-transform:uppercase}
+.marca-texto small{font-family:var(--fonte-titulo);font-weight:600;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-top:3px}
+.topo .menu{flex:1;display:flex;justify-content:flex-end}
+.topo .menu ul{gap:4px}
+/* linha 2: Explore e os nichos espalhados pela largura */
+.topo-explore{height:34px;display:flex;align-items:center;gap:22px;padding:0 max(20px,calc((100% - 1360px) / 2));border-top:1px solid rgba(255,255,255,.12)}
+.explore-rotulo{flex:0 0 auto;font-family:var(--fonte-titulo);font-weight:700;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;opacity:.65}
+.topo-explore ul{flex:0 1 auto;display:flex;justify-content:flex-start;gap:26px;list-style:none;margin:0;padding:0}
+.topo-explore a{display:flex;align-items:center;gap:7px;color:var(--creme);text-decoration:none;font-size:.82rem;font-weight:600;white-space:nowrap}
+.topo-explore a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.topo-explore i{flex:0 0 7px;height:7px;border-radius:50%;background:var(--cor)}
+@media (max-width:1000px){
+  .topo-explore{gap:12px}
+  .topo-explore ul{overflow-x:auto;scrollbar-width:none;gap:16px}
+  .topo-explore ul::-webkit-scrollbar{display:none}
+  .explore-rotulo{display:none}
+}
+.marca-nome{font-family:var(--fonte-titulo);font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:8px}
+/* ícone de claquete (luz, câmera, ação) antes do nome */
+.marca-nome::before{content:"";flex:0 0 20px;width:20px;height:20px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath fill=%27%23E85A23%27 d=%27M3 10h18v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9Z%27/%3E%3Cpath fill=%27%23E85A23%27 d=%27m2.6 6.3 15.8-3.6a1 1 0 0 1 1.2.8l.5 2.1L3.5 9.4 3 7.5a1 1 0 0 1-.4-1.2Z%27/%3E%3Cpath fill=%27%23fff%27 d=%27m6.5 5.3 2.2 2.8 2.4-.5-2.2-2.8zm5.3-1.2 2.2 2.8 2.4-.5-2.2-2.8z%27/%3E%3C/svg%3E")}
+.menu{flex:1}
+.menu ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.menu a{display:block;text-decoration:none;font-size:.86rem;font-weight:600;padding:5px 11px;border-radius:6px;color:var(--tinta)}
+.menu a:hover{background:rgba(40,59,99,.08)}
+/* nichos direto na barra: cada um com uma bolinha da cor do filtro */
+/* Black Friday em destaque no menu */
+.topo .menu a.link-bf{background:var(--laranja-botao);color:#fff;border-radius:999px;padding-left:13px;padding-right:13px}
+.topo .menu a.link-bf:hover{background:var(--coral);color:#fff}
+.menu a.link-nicho{display:flex;align-items:center;gap:6px}
+.menu a.link-nicho i{flex:0 0 7px;height:7px;border-radius:50%;background:var(--cor)}
+.menu a{white-space:nowrap}
+/* em telas menores que 1000px os links principais viram menu sanduíche */
+@media (max-width:1000px){
+  .topo-interno{position:relative;gap:10px}
+  .topo .menu{display:none;position:absolute;top:100%;left:0;right:0;z-index:5;background:var(--petroleo);border-bottom:1px solid rgba(255,255,255,.1)}
+  .topo .menu.aberto{display:block}
+  .topo .menu ul{flex-direction:column}
+  .topo .sanduiche{margin-left:auto}
+  .topo .sanduiche{display:block}
+  .relogio{display:none}
+  .menu{position:absolute;top:100%;left:0;right:0;background:var(--petroleo);border-bottom:1px solid rgba(255,255,255,.1);display:none}
+  .menu.aberto{display:block}
+  .menu ul{flex-direction:column;padding:8px 14px 16px}
+  .menu a{padding:12px 14px;font-size:1.05rem}
+}
+.relogio{font-family:var(--fonte-titulo);font-size:.82rem;font-weight:600;white-space:nowrap;opacity:.9}
+.sanduiche{display:none;margin-left:4px;background:none;border:0;width:44px;height:40px;cursor:pointer;padding:0;position:relative;color:var(--tinta)}
+.sanduiche span,.sanduiche span::before,.sanduiche span::after{content:"";position:absolute;left:50%;width:22px;height:2px;background:currentColor;transform:translateX(-50%);transition:transform .25s}
+.sanduiche span{top:50%;margin-top:-1px}
+.sanduiche span::before{top:-7px;left:0;transform:none}
+.sanduiche span::after{top:7px;left:0;transform:none}
+.sanduiche[aria-expanded="true"] span{background:transparent}
+.sanduiche[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.sanduiche[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* botões PT/EN e "Trabalhe comigo" no menu */
+.acoes-topo{display:flex;align-items:center;gap:10px;flex:0 0 auto} /* fica na linha de baixo, alinhada embaixo de "Sobre mim" (o script calcula a posição) */
+.idioma{display:flex;height:26px;align-items:center;box-sizing:border-box;padding:3px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+.idioma button{border:0;background:none;color:var(--creme);font-family:var(--fonte-titulo);font-weight:800;font-size:.72rem;letter-spacing:.08em;padding:2px 9px;border-radius:999px;cursor:pointer}
+.idioma button[aria-pressed="true"]{background:var(--creme);color:var(--tinta)}
+.trabalhe{display:inline-flex;align-items:center;justify-content:center;height:26px;padding:0 12px;border-radius:999px;background:var(--laranja-botao);color:#fff;text-decoration:none;font-family:var(--fonte-titulo);font-weight:800;font-size:.72rem;letter-spacing:.02em;white-space:nowrap;transition:background .2s}
+.trabalhe:hover{background:var(--coral)}
+@media (max-width:600px){.trabalhe{display:none}.marca-texto small{font-size:.5rem;letter-spacing:.14em}.marca-topo::before{display:none}}
+/* menu compacto no computador, para caber nichos, idioma e "Trabalhe comigo" */
+.menu a{padding:5px 7px;font-size:.84rem}
+/* ===================== JANELAS ===================== */
+/* as janelas ocupam a largura toda da tela; o conteúdo fica centralizado com respiro nas laterais */
+main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha dos nichos (34px) */
+.janela{width:100%;margin:0;background:var(--janela);border-bottom:1px solid var(--linha);overflow:hidden;overflow:clip} /* clip deixa a foto do sobre ficar fixa na rolagem */
+/* barra de título com os três botões e a "busca" */
+.barra{display:grid;grid-template-columns:1fr minmax(0,auto) 1fr;align-items:center;gap:12px;padding:12px 16px;
+  background:linear-gradient(#fbe7d8,#f6d0b8);border-bottom:1px solid var(--linha)}
+.semaforo{display:flex;gap:8px}
+.semaforo i{width:12px;height:12px;border-radius:50%;background:var(--vermelho-mac);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.2)}
+.semaforo i:nth-child(2){background:var(--amarelo-mac)}
+.semaforo i:nth-child(3){background:var(--verde-mac)}
+.busca{display:flex;align-items:center;gap:8px;min-width:0;width:min(440px,100%);padding:6px 14px;border-radius:8px;
+  background:rgba(255,255,255,.75);border:1px solid var(--linha);font-size:.88rem;font-weight:600;color:var(--tinta-suave)}
+.busca svg{flex:0 0 14px;width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2}
+.busca span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* barra completa no estilo do Safari: botões, barra lateral, voltar e avançar, endereço no meio e ícones à direita */
+.barra.safari{grid-template-columns:1fr minmax(0,620px) 1fr;padding:9px 16px}
+.lado-esq{display:flex;align-items:center;gap:20px}
+.icones{display:flex;align-items:center;gap:16px;color:var(--tinta-suave)}
+.icones svg,.busca .recarregar{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.lado-dir{justify-self:end}
+.safari .busca{position:relative;width:100%;justify-content:center;padding:7px 38px;border-radius:9px;background:rgba(255,255,255,.8)}
+.safari .busca .recarregar{position:absolute;right:12px;top:50%;width:14px;height:14px;transform:translateY(-50%)}
+.conteudo{padding:80px max(clamp(20px,5vw,72px),calc((100% - 1360px) / 2));background-image:radial-gradient(rgba(40,59,99,.12) 1.2px,transparent 1.4px);background-size:22px 22px}
+
+/* rótulos e títulos */
+.rotulo-topo{display:block;font-family:var(--fonte-titulo);font-weight:600;font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:22px;color:var(--tinta-suave)}
+.titulo-secao{font-size:clamp(1.9rem,4.4vw,3.2rem);font-weight:900;text-transform:uppercase;color:var(--tinta)}
+.titulo-secao em{font-style:normal;color:var(--coral-grande)} /* só a palavra em destaque fica laranja */
+.titulo-secao em.linha{display:block} /* segunda linha do título, como na capa */
+.intro{max-width:640px;color:var(--tinta-suave);font-size:1.12rem;margin-bottom:36px}
+
+/* botões no formato da referência: bloco reto e link com seta */
+.botao{display:inline-flex;align-items:center;justify-content:space-between;gap:44px;font-family:var(--fonte-titulo);font-weight:600;font-size:1.02rem;
+  text-decoration:none;padding:24px 34px 24px 40px;border:0;border-radius:0;cursor:pointer;transition:background .2s,transform .2s}
+.botao svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .2s}
+.botao-primario{background:var(--laranja-botao);color:#fff}
+.botao-primario:hover{background:var(--coral-texto)}
+.botao-primario:hover svg{transform:translateY(3px)}
+.botao-link{background:transparent;color:inherit;padding:24px 8px;gap:18px}
+.botao-link:hover svg{transform:translate(3px,-3px)}
+.botao-link:hover span{text-decoration:underline;text-underline-offset:5px}
+
+/* blocos de mídia (placeholder com degradê) */
+.midia{position:relative;width:100%;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;color:#fff;
+  background:linear-gradient(150deg,var(--g1,#FD8C89),var(--g2,#E85A23))}
+.midia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.midia .legenda-formato{position:relative;z-index:1;font-size:.88rem;font-weight:600;background:rgba(90,33,16,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:5px 12px;border-radius:999px;margin-bottom:14px;text-align:center}
+.r45{aspect-ratio:4/5}.r916{aspect-ratio:9/16}.r11{aspect-ratio:1/1}
+
+/* ===================== 1. CAPA ===================== */
+/* a capa preenche a primeira tela inteira */
+.capa{min-height:calc(100vh - 130px);min-height:calc(100svh - 130px);display:flex;flex-direction:column}
+.capa .conteudo{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:40px}
+.spotlight{display:flex;align-items:center;gap:14px;max-width:560px;padding:14px 20px;margin-bottom:40px;border-radius:14px;
+  background:rgba(255,255,255,.6);border:1px solid var(--linha);box-shadow:0 20px 40px -24px rgba(40,59,99,.3);font-size:1.15rem;font-weight:600}
+.spotlight svg{flex:0 0 22px;width:22px;height:22px;stroke:var(--tinta-suave);fill:none;stroke-width:2}
+.spotlight .cursor{display:inline-block;width:2px;height:1.2em;background:var(--coral);vertical-align:-3px;margin-left:2px;animation:piscar 1s steps(1) infinite}
+@keyframes piscar{50%{opacity:0}}
+.capa-grade{display:grid;grid-template-columns:1.6fr .9fr;gap:clamp(40px,6vw,96px);align-items:center}
+.capa h1{font-size:clamp(2.2rem,4.4vw,5rem);font-weight:900;text-transform:uppercase;line-height:.98;letter-spacing:-.03em;color:var(--tinta);margin-bottom:28px;overflow-wrap:break-word}
+.capa h1 em{font-style:normal;color:var(--coral-grande)}
+.capa h1 .linha2{display:block}
+.capa .frase{font-size:clamp(1.1rem,1.9vw,1.4rem);max-width:600px;color:var(--tinta);line-height:1.6}
+.capa .frase strong{color:var(--coral-texto);font-weight:700}
+.capa .botoes{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;margin:34px 0 36px}
+/* foto da capa com cartõezinhos flutuando em volta, no estilo das notificações do Mac */
+.foto-hero{position:relative;justify-self:center;width:100%;max-width:420px}
+.selos{list-style:none;margin:0;padding:0}
+.selos li{position:absolute;z-index:2;display:flex;align-items:center;gap:10px;max-width:230px;padding:10px 16px 10px 10px;border-radius:14px;
+  background:var(--laranja-botao);border:1px solid rgba(255,255,255,.25);box-shadow:0 18px 34px -16px rgba(166,63,23,.55);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:flutuar 6s ease-in-out infinite alternate}
+.selos li:nth-child(1){top:8%;left:-20%}
+.selos li:nth-child(2){top:32%;right:-14%;animation-delay:-2s}
+.selos li:nth-child(3){bottom:24%;left:-18%;animation-delay:-4s}
+.selos li:nth-child(4){bottom:2%;right:-10%;animation-delay:-1s}
+.selos .icone{flex:0 0 38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;font-size:1.15rem}
+.selos strong{display:block;font-family:var(--fonte-titulo);font-weight:800;font-size:1rem;line-height:1.15;color:#fff}
+.selos small{display:block;font-size:.8rem;font-weight:600;line-height:1.3;color:#fff}
+@keyframes flutuar{to{transform:translateY(-8px)}}
+/* foto como uma janelinha de pré-visualização */
+.previa{transform:rotate(1.5deg);width:100%}
+.previa figure{margin:0}
+/* faixa de marcas no formato do Dock */
+/* faixa de ponta a ponta, encostando nas laterais da tela */
+.dock{margin:0;width:100%;padding:14px 0;overflow:hidden;
+  background:var(--petroleo);border:0} /* faixa azul inteira, com os tipos de conteúdo em branco */
+.faixa-trilho{display:flex;gap:6px;width:max-content;animation:rolar 34s linear infinite}
+.faixa-trilho span.marca{display:inline-flex;align-items:center;padding:8px 18px;border-radius:12px;background:none;font-family:var(--fonte-titulo);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;white-space:nowrap}
+.faixa-trilho span.marca::after{content:"✦";margin-left:22px;color:var(--amarelo)}
+@keyframes rolar{to{transform:translateX(-50%)}}
+
+/* ===================== 2. SOBRE ===================== */
+/* foto e texto com a mesma altura: o post da foto estica do topo do título até a última promessa */
+.sobre-grade{display:grid;grid-template-columns:minmax(300px,400px) 1fr;gap:clamp(32px,5vw,64px);align-items:stretch}
+.coluna-foto{display:flex}
+.foto-sobre{display:flex;flex-direction:column}
+.foto-sobre .midia{flex:1;aspect-ratio:auto;min-height:420px}
+.foto-sobre{width:100%}
+.promessas{list-style:none;padding:0;margin:22px 0 0}
+.promessas li{position:relative;padding:10px 0 10px 40px;font-size:.92rem;border-bottom:1px solid var(--linha);font-weight:600}
+.promessas li::before{content:"✓";position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;background:var(--laranja-botao);color:#fff;display:grid;place-items:center;font-size:.85rem;font-weight:700}
+/* resultados da E-commerce Brasil: quadrados laranja com cantos arredondados */
+.resultados-sobre{list-style:none;padding:0;margin:10px 0 26px;display:flex;flex-wrap:wrap;gap:10px}
+.resultados-sobre li{display:flex;flex-direction:column;justify-content:center;min-width:130px;background:var(--laranja-botao);color:#fff;border-radius:14px;padding:14px 18px}
+.resultados-sobre strong{font-family:var(--fonte-titulo);font-weight:900;font-size:1.45rem;line-height:1.1}
+.resultados-sobre span{font-size:.8rem;font-weight:600;opacity:.92}
+#sobre strong.destaque{color:var(--coral-texto);font-weight:700}
+.chamada-resultados{margin:8px 0 0}
+.grupo-titulo{font-weight:700;margin:0 0 8px;font-size:.9rem;line-height:1.45}
+/* sobre mim mais compacto: título e textos um pouco menores */
+#sobre .titulo-secao{font-size:clamp(1.7rem,3.4vw,2.5rem)}
+#sobre p{font-size:.95rem;line-height:1.6}
+#sobre p.grupo-titulo{font-size:.9rem}
+.tags{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{background:var(--papel);color:var(--tinta);border:1px solid var(--linha);border-radius:7px;padding:3px 10px;font-size:.8rem;font-weight:600}
+
+/* ===================== 3. DESTAQUES ===================== */
+/* destaques: carrossel com os vídeos de verdade e as infos do vídeo do meio ao lado */
+/* coluna da esquerda com um ritmo único de espaços: título, frase, nota, linha e infos do vídeo */
+.destaques-grade{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,56px);align-items:center}
+#destaques .titulo-secao{font-size:clamp(1.5rem,2.6vw,2.15rem);margin-bottom:14px}
+#destaques .intro{font-size:.95rem;line-height:1.55;max-width:470px;margin-bottom:14px}
+.nota-autoral{display:inline-flex;align-items:baseline;gap:8px;max-width:470px;margin:0 0 22px;padding:7px 14px;border-radius:12px;line-height:1.45;background:rgba(253,140,137,.3);font-size:.8rem;font-weight:600;color:var(--tinta)}
+.nota-autoral strong{color:var(--coral-texto)}
+.coluna-destaques .info-video{padding-top:20px;border-top:1px solid var(--linha)}
+.info-video{transition:opacity .25s ease,transform .25s ease}
+.info-video.trocando{opacity:0;transform:translateY(8px)}
+.contagem{font-family:var(--fonte-titulo);font-weight:700;font-size:.8rem;letter-spacing:.24em;color:var(--coral-texto)}
+.info-video h3{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:800;margin:6px 0 14px;line-height:1.25}
+.info-video p{font-size:.92rem;line-height:1.55;margin-bottom:16px}
+.carrossel{position:relative;min-width:0}
+.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:12px calc(50% - 120px);overscroll-behavior-x:contain}
+.trilho::-webkit-scrollbar{display:none}
+.slide{flex:0 0 240px;position:relative;scroll-snap-align:center;
+  opacity:.35;transform:scale(.86);transition:opacity .4s ease,transform .4s ease}
+.slide.ativo{opacity:1;transform:none}
+/* o Instagram coloca cabeçalho e rodapé no vídeo: esconde o cabeçalho e corta o rodapé */
+.slide.instagram .post-midia iframe{top:-56px;height:calc(100% + 260px)}
+.slide:not(.ativo)::after{content:"";position:absolute;inset:0;cursor:pointer;z-index:2}
+
+/* moldura no estilo de um post do Instagram, nas cores do portfólio */
+.post-insta{background:var(--papel);border:1px solid var(--linha);border-radius:16px;overflow:hidden;box-shadow:0 22px 40px -28px rgba(40,59,99,.5)}
+.post-topo{display:flex;align-items:center;gap:9px;padding:9px 12px}
+.post-avatar{flex:0 0 32px;height:32px;padding:2px;border-radius:50%;background:linear-gradient(135deg,var(--salmao),var(--coral))}
+.post-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 40%;border:2px solid var(--papel)}
+.post-quem{flex:1;min-width:0;font-size:.8rem;line-height:1.25;color:var(--tinta);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post-quem small{display:block;font-size:.7rem;color:var(--tinta-suave)}
+.post-mais{font-size:.75rem;letter-spacing:1px;color:var(--tinta-suave)}
+.post-midia{position:relative;aspect-ratio:9/16;background:var(--tinta);overflow:hidden}
+.post-midia iframe,.post-midia video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.post-midia video{object-fit:cover}
+.post-acoes{display:flex;align-items:center;gap:14px;padding:9px 12px;color:var(--tinta)}
+.post-acoes svg{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.post-acoes .salvar{margin-left:auto}
+.post-legenda{margin:0;padding:0 12px 14px;font-size:.84rem;line-height:1.4}
+.post-legenda .nicho{display:block;margin-bottom:3px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-texto)}
+/* capa do vídeo da galeria: o player do YouTube só carrega quando a pessoa clica no play */
+.capa-video{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;cursor:pointer;background:var(--tinta)}
+.capa-video img{width:100%;height:100%;object-fit:cover}
+.capa-video .play{position:absolute;top:50%;left:50%;width:58px;height:58px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.65);display:grid;place-items:center;transition:transform .2s}
+.capa-video .play::before{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 17px;border-color:transparent transparent transparent #fff}
+.capa-video:hover .play{transform:translate(-50%,-50%) scale(1.08)}
+.seta{position:absolute;top:50%;z-index:3;width:46px;height:46px;transform:translateY(-50%);border-radius:50%;border:1px solid var(--linha);background:rgba(255,255,255,.94);color:var(--tinta);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -10px rgba(0,0,0,.5);transition:opacity .2s}
+.seta svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4}
+.seta-ant{left:6px}.seta-prox{right:6px}
+.seta:disabled{opacity:.3;cursor:default}
+.pontos{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.pontos button{width:9px;height:9px;padding:0;border:0;border-radius:5px;background:rgba(40,59,99,.2);cursor:pointer;transition:width .3s,background .3s}
+.pontos button[aria-current="true"]{width:26px;background:var(--coral-texto)}
+.numeros-video{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:10px}
+.numeros-video li{background:var(--laranja-botao);color:#fff;border-radius:10px;padding:10px 16px}
+.numeros-video strong{display:block;font-family:var(--fonte-titulo);font-size:1.3rem;font-weight:900;line-height:1.1}
+.numeros-video span{font-size:.78rem;font-weight:600}
+.info-video h4{font-family:var(--fonte-titulo);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--tinta-suave);margin:0 0 8px}
+.estrategia{list-style:none;padding:0;margin:0;display:grid;gap:5px;font-size:.85rem;line-height:1.5}
+.estrategia li{position:relative;padding-left:24px}
+.estrategia li::before{content:"";position:absolute;left:2px;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--coral)}
+
+/* ===================== 4. TRABALHOS ===================== */
+.filtros{display:inline-flex;flex-wrap:wrap;gap:4px;padding:4px;margin-bottom:32px;background:rgba(40,59,99,.08);border-radius:10px}
+.filtro{font-family:var(--fonte-corpo);font-weight:700;font-size:.92rem;cursor:pointer;border:0;color:var(--tinta);background:transparent;padding:9px 18px;border-radius:7px;transition:background .2s}
+.filtro:hover{background:rgba(255,255,255,.6)}
+.filtro[aria-pressed="true"]{background:var(--laranja-botao);color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12)} /* laranja: nicho escolhido */
+.filtro i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:var(--cor-filtro,#999);vertical-align:1px}
+/* vídeos por nicho: o tamanho dos cards faz o título, os filtros e a primeira fileira preencherem a primeira tela */
+.trabalhos-grade{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px} /* 5 vídeos por linha */
+@media (max-width:1100px){.trabalhos-grade{grid-template-columns:repeat(3,minmax(0,1fr))}}
+#trabalhos .titulo-secao{font-size:clamp(1.5rem,2.6vw,2.2rem);margin-bottom:10px}
+#trabalhos .intro{font-size:.92rem;margin-bottom:26px}
+#trabalhos .filtros{margin-bottom:28px}
+.trabalho .post-topo,.card-sua-marca .post-topo{padding:6px 9px}
+.trabalho .post-avatar,.card-sua-marca .post-avatar{flex-basis:24px;height:24px}
+.trabalho .post-quem,.card-sua-marca .post-quem{font-size:.66rem}
+.trabalho .post-acoes,.card-sua-marca .post-acoes{padding:6px 9px;gap:9px}
+.trabalho .post-acoes svg,.card-sua-marca .post-acoes svg{width:15px;height:15px}
+.trabalho .post-legenda,.card-sua-marca .post-legenda{padding:0 9px 9px;font-size:.72rem}
+.trabalho .capa-video .play{width:42px;height:42px}
+.sua-marca-texto strong{font-size:1rem}
+.trabalho{animation:aparecer .35s ease}
+.trabalho[hidden]{display:none}
+/* card "o próximo vídeo é a sua marca" */
+.card-sua-marca{display:block;text-decoration:none;color:inherit;transition:transform .25s}
+.card-sua-marca[hidden]{display:none}
+.card-sua-marca:hover{transform:translateY(-4px)}
+.sua-marca-midia{display:grid;place-items:center;padding:16px;background:linear-gradient(160deg,var(--coral),var(--laranja-botao))}
+.sua-marca-texto{display:grid;gap:12px;justify-items:center;width:100%;height:100%;align-content:center;padding:18px;border:2px dashed rgba(255,255,255,.6);border-radius:12px;text-align:center;color:#fff}
+.sua-marca-rotulo{font-family:var(--fonte-titulo);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.95}
+.sua-marca-texto strong{font-family:var(--fonte-titulo);font-size:clamp(1.15rem,1.8vw,1.5rem);font-weight:900;text-transform:uppercase;line-height:1.1}
+.sua-marca-cta{padding:8px 14px;border-radius:999px;background:#fff;color:var(--coral-texto);font-size:.8rem;font-weight:700;line-height:1.3}
+@keyframes aparecer{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ===================== 5. SERVIÇOS ===================== */
+/* como eu te ajudo: 8 cartões alternando laranja e azul, com escrita branca */
+.servicos-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;padding:0;margin:0}
+.servico{background:var(--laranja-botao);color:#fff;border-radius:14px;padding:24px 22px;transition:transform .2s}
+.servico:nth-child(4n+2),.servico:nth-child(4n+3){background:var(--petroleo)}
+.servico:hover{transform:translateY(-4px)}
+.servico .num{font-family:var(--fonte-titulo);font-weight:900;font-size:.95rem;color:rgba(255,255,255,.75);letter-spacing:.1em}
+.servico h3{font-size:1.05rem;margin:10px 0 8px;text-transform:uppercase;color:#fff}
+.servico p{margin:0;color:rgba(255,255,255,.9);font-size:.88rem;line-height:1.5}
+
+/* ===================== BLACK FRIDAY (funil) ===================== */
+.selo-bf{display:inline-block;margin-bottom:14px;padding:5px 12px;border-radius:999px;background:var(--tinta);color:#fff;font-family:var(--fonte-titulo);font-weight:800;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+/* as etapas ficam lado a lado; cada uma ocupa a largura dos vídeos que tem */
+.funil{display:grid;grid-template-columns:var(--colunas,repeat(4,minmax(0,1fr)));gap:18px;align-items:stretch}
+.etapa{grid-column:span var(--n);display:flex;flex-direction:column}
+.etapa .etapa-cards{flex:1}
+.etapa-cards .post-insta{display:flex;flex-direction:column}
+.etapa-cards .post-legenda{flex:1}
+.etapa-cab{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding:12px 26px 12px 16px;color:var(--marrom);
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)}
+.etapa-topo .etapa-cab{background:var(--salmao)}
+.etapa-meio .etapa-cab{background:var(--amarelo)}
+.etapa-fundo .etapa-cab{background:var(--laranja-botao);color:#fff}
+.etapa-num{font-family:var(--fonte-titulo);font-weight:900;font-size:1.3rem;line-height:1}
+.etapa-cab strong{display:block;font-family:var(--fonte-titulo);font-weight:800;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.etapa-cab small{display:block;font-size:.78rem;font-weight:600;opacity:.9}
+.etapa-cards{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:18px}
+.post-legenda strong{color:var(--tinta)}
+.funil .post-legenda strong{white-space:pre-line;display:block;line-height:1.35}
+.desc-funil{margin:4px 0 0;font-size:.8rem;line-height:1.45;color:var(--tinta-suave)}
+
+/* ===================== FOTOS UGC (duas faixas de posts) ===================== */
+/* cada foto vira um post do Instagram; duas faixas menores rolam sozinhas, em sentidos opostos */
+.faixas-fotos{display:grid;gap:8px;width:100vw;margin-left:calc(50% - 50vw)} /* faixas de ponta a ponta da tela */
+/* a seção de fotos cabe numa tela: título, frase e as duas faixas mais compactos */
+#fotos .conteudo{padding-top:36px;padding-bottom:36px}
+#fotos .titulo-secao{font-size:clamp(1.5rem,2.6vw,2.2rem);margin-bottom:10px}
+#fotos .intro{font-size:.92rem;margin-bottom:18px}
+.mural{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 12px;scrollbar-width:none}
+.mural::-webkit-scrollbar{display:none}
+.post-foto{flex:0 0 150px}
+.post-foto .post-midia{aspect-ratio:4/5;background:var(--creme)}
+.post-foto .post-midia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.post-foto .post-topo{padding:5px 8px;gap:6px}
+.post-foto .post-avatar{flex-basis:22px;height:22px}
+.post-foto .post-mais{display:none}
+.post-foto .post-quem{font-size:.64rem}
+.post-foto .post-quem small{font-size:.6rem}
+.post-foto .post-acoes{padding:5px 8px;gap:8px}
+.post-foto .post-acoes svg{width:14px;height:14px}
+.post-foto .post-legenda{padding:0 8px 8px;font-size:.66rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:600px){.post-foto{flex-basis:130px}}
+
+/* ===================== 7. CONTATO ===================== */
+.contato-grade{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.formulario{display:grid;gap:16px}
+.campo label{display:block;font-weight:700;margin-bottom:6px;font-size:.95rem}
+.campo input,.campo textarea,.campo select{width:100%;font:inherit;color:var(--tinta);padding:12px 14px;border:1px solid rgba(40,59,99,.25);border-radius:8px;background:#fffaf6;transition:border-color .2s,box-shadow .2s}
+.campo input:focus,.campo textarea:focus,.campo select:focus{border-color:var(--coral-texto);outline:none;box-shadow:0 0 0 4px rgba(232,90,35,.25)}
+.campo textarea{min-height:140px;resize:vertical}
+.campo select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23283B63%27 stroke-width=%272.4%27%3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:38px}
+.campos-duplos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.aviso-form{margin:4px 0 0;padding:10px 14px;border-radius:10px;background:#fdecea;border:1px solid #e7a59b;color:#a3271a;font-size:.85rem;font-weight:600}
+.erro{color:#a3271a;font-size:.9rem;min-height:1.2em;margin:4px 0 0}
+.confirmacao{background:var(--papel);border:1px solid var(--coral);border-radius:12px;padding:22px;font-weight:600}
+.confirmacao strong{font-family:var(--fonte-titulo);font-size:1.2rem;color:var(--coral-texto);display:block;text-transform:uppercase}
+.canais{display:grid;gap:12px}
+/* canais de contato: barras laranja, todas com ícone da mesma cor */
+.canal{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;background:var(--laranja-botao);border:1px solid transparent;border-radius:12px;padding:14px 16px;transition:transform .2s,box-shadow .2s}
+.canal:hover{background:var(--coral-texto);transform:translateX(4px);box-shadow:0 14px 30px -22px rgba(0,0,0,.5)}
+.canal .icone{flex:0 0 44px;height:44px;border-radius:11px;background:#fff;display:grid;place-items:center;color:var(--laranja-botao)}
+.canal .icone svg{width:22px;height:22px;fill:currentColor}
+.canal strong{display:block;font-family:var(--fonte-titulo)}
+.canal span{font-size:.92rem;color:rgba(255,255,255,.9);word-break:break-all}
+/* setinha no fim de cada canal, mostrando que dá para clicar */
+.canal::after{content:"↗";margin-left:auto;font-size:1.1rem;font-weight:700;color:#fff;transition:transform .2s}
+.canal:hover::after{transform:translate(2px,-2px)}
+
+/* contato compacto: título, formulário e canais cabem numa tela só */
+#contato .conteudo{padding-top:32px;padding-bottom:32px}
+#contato .titulo-secao{font-size:clamp(1.5rem,2.6vw,2.2rem);margin-bottom:10px}
+#contato .intro{font-size:.92rem;margin-bottom:18px}
+#contato .contato-grade{align-items:center}
+#contato .formulario{gap:8px}
+#contato .campo label{margin-bottom:3px;font-size:.85rem}
+#contato .campo input,#contato .campo select,#contato .campo textarea{padding:9px 12px}
+#contato .campo textarea{min-height:84px}
+#contato .erro{min-height:0;margin:2px 0 0;font-size:.8rem}
+#contato .formulario .botao{padding:14px 22px;font-size:.92rem}
+#contato .canais{gap:10px}
+#contato .canal{padding:11px 14px}
+#contato .canal .icone{flex-basis:38px;height:38px}
+
+/* ===================== PERGUNTAS FREQUENTES ===================== */
+.faq{display:grid;gap:8px;max-width:820px}
+#faq .conteudo{padding-top:36px;padding-bottom:36px}
+#faq .titulo-secao{font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:8px}
+#faq .intro{font-size:.9rem;margin-bottom:16px}
+#faq.janela{min-height:0} /* perguntas frequentes: página curta */
+.faq details{background:var(--papel);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
+.faq details[open]{border-color:rgba(40,59,99,.3)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;font-family:var(--fonte-titulo);font-weight:800;font-size:.92rem;color:var(--tinta)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--petroleo);color:#fff;font-size:1.3rem;font-weight:700;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0;padding:0 18px 14px;color:var(--tinta-suave);font-size:.88rem}
+
+/* ===================== 8. RODAPÉ ===================== */
+.rodape{padding:0}
+.rodape .interno{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;color:var(--creme);
+  padding:28px max(clamp(20px,5vw,72px),calc((100% - 1360px) / 2));background:var(--petroleo)} /* rodapé: detalhe em azul */
+.rodape .redes{display:flex;gap:8px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.rodape .redes a{display:inline-block;padding:7px 14px;border-radius:8px;background:rgba(255,255,255,.08);text-decoration:none;font-size:.92rem;font-weight:600}
+.rodape .redes a:hover{background:rgba(255,255,255,.16)}
+.rodape small{opacity:.8}
+.cargo-rodape{font-family:var(--fonte-corpo);font-weight:600;font-size:.85rem;opacity:.85}
+
+/* ===================== CARD DE CAPTURA (janela do Mac) ===================== */
+.fundo-modal{position:fixed;inset:0;z-index:90;background:rgba(90,33,16,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.fundo-modal.aberto{opacity:1;visibility:visible}
+.modal{width:100%;max-width:440px;max-height:calc(100vh - 40px);overflow:auto;background:var(--janela);border-radius:14px;box-shadow:0 40px 80px -20px rgba(0,0,0,.7);transform:scale(.96);transition:transform .3s}
+.fundo-modal.aberto .modal{transform:none}
+.modal .barra{grid-template-columns:auto 1fr auto}
+.modal .barra .nome-arquivo{text-align:center;font-size:.85rem;font-weight:700;color:var(--tinta-suave)}
+.fechar{width:12px;height:12px;border-radius:50%;border:0;padding:0;background:var(--vermelho-mac);cursor:pointer;position:relative}
+.fechar::after{content:"";position:absolute;inset:-14px}
+.fechar:hover::before,.fechar:focus-visible::before{content:"×";position:absolute;inset:0;display:grid;place-items:center;font-size:11px;line-height:1;color:rgba(0,0,0,.6);font-weight:700}
+.modal .corpo{padding:28px 28px 30px}
+.modal h2{font-size:1.3rem;line-height:1.15;font-weight:900;text-transform:uppercase}
+.modal .botao{width:100%}
+.modal .formulario{gap:8px}
+.modal .campo label{margin-bottom:3px;font-size:.85rem}
+.modal .campo input{padding:9px 12px}
+.modal .erro{min-height:0;margin-top:2px;font-size:.8rem}
+.modal{max-width:500px}
+
+/* ===================== AJUSTES DE TAMANHO ===================== */
+/* capa mais compacta: conteúdo mais estreito e tudo um pouco menor, para a faixa dos tipos de conteúdo aparecer já na primeira tela */
+.capa .conteudo{padding-top:28px;padding-bottom:24px;padding-left:max(clamp(20px,5vw,72px),calc((100% - 1180px) / 2));padding-right:max(clamp(20px,5vw,72px),calc((100% - 1180px) / 2))}
+.capa .rotulo-topo{margin-bottom:14px;font-size:.72rem}
+.capa .spotlight{max-width:470px;padding:10px 16px;margin-bottom:24px;font-size:1rem}
+.capa .spotlight svg{flex-basis:18px;width:18px;height:18px}
+.capa-grade{grid-template-columns:1.5fr .85fr;gap:clamp(36px,5vw,72px)}
+.capa h1{font-size:clamp(2rem,3.5vw,3.7rem);margin-bottom:18px}
+.capa .frase{font-size:clamp(1rem,1.4vw,1.15rem);max-width:520px}
+.capa .botoes{margin:22px 0 0}
+.capa .botao{padding:18px 26px 18px 30px;font-size:.95rem;gap:32px}
+.capa .botao-link{padding:18px 6px}
+.foto-hero{max-width:320px}
+.selos li{max-width:200px;padding:7px 12px 7px 7px;gap:8px}
+.selos .icone{flex-basis:30px;height:30px;font-size:.95rem}
+.selos strong{font-size:.88rem}
+.selos small{font-size:.72rem}
+
+/* ===================== BLACK FRIDAY: fundo azul e tudo cabendo em uma tela ===================== */
+#black-friday{background:var(--petroleo);color:var(--creme)}
+#black-friday .barra{background:linear-gradient(#32467a,#2b3e6c);border-bottom-color:rgba(255,255,255,.08)}
+#black-friday .busca{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.12);color:rgba(249,223,204,.85)}
+#black-friday .icones{color:rgba(249,223,204,.7)}
+#black-friday .conteudo{padding-top:44px;padding-bottom:44px;background-image:radial-gradient(rgba(249,223,204,.1) 1.2px,transparent 1.4px)}
+#black-friday .titulo-secao{color:var(--creme);font-size:clamp(1.6rem,2.6vw,2.3rem);margin-bottom:14px}
+#black-friday .titulo-secao em{color:var(--amarelo)}
+#black-friday .intro{color:rgba(249,223,204,.9);font-size:.95rem;line-height:1.6;margin-bottom:0}
+#black-friday .selo-bf{background:var(--amarelo);color:var(--tinta)}
+/* título e texto à esquerda, funil à direita */
+/* cartão amarelo da Black Friday: título curto, uma linha de apoio e um botão */
+.chamada-bf{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding:16px 16px 16px 20px;border-radius:16px;background:var(--amarelo-bf);color:var(--tinta);text-decoration:none;transition:transform .2s}
+.chamada-bf:hover{transform:translateY(-2px)}
+.chamada-bf-texto{display:grid;gap:3px}
+.chamada-bf strong{font-family:var(--fonte-titulo);font-weight:800;font-size:.95rem;line-height:1.2}
+.chamada-bf-texto span{font-size:.8rem;opacity:.85}
+.chamada-bf em{flex:0 0 auto;font-style:normal;font-family:var(--fonte-titulo);font-weight:800;font-size:.78rem;padding:9px 14px;border-radius:999px;background:var(--tinta);color:#fff;white-space:nowrap}
+.bf-grade{display:grid;grid-template-columns:minmax(260px,.38fr) 1fr;gap:clamp(28px,4vw,56px);align-items:center}
+.funil{gap:14px}
+.etapa-cab{margin-bottom:12px;padding:9px 22px 9px 12px;gap:10px}
+.etapa-num{font-size:1.05rem}
+.etapa-cab strong{font-size:.76rem}
+.etapa-cab small{font-size:.7rem}
+.etapa-cards{gap:14px}
+.funil .post-midia{aspect-ratio:9/14}
+.funil .post-topo{padding:7px 10px}
+.funil .post-avatar{flex-basis:26px;height:26px}
+.funil .post-quem{font-size:.72rem}
+.funil .post-acoes{padding:7px 10px;gap:11px}
+.funil .post-acoes svg{width:17px;height:17px}
+.funil .post-legenda{padding:0 10px 10px;font-size:.76rem;line-height:1.35}
+.funil .desc-funil{font-size:.72rem;line-height:1.4}
+.funil .capa-video .play{width:44px;height:44px}
+
+/* ===================== TELAS DO MESMO TAMANHO ===================== */
+/* cada seção ocupa no mínimo uma tela (menos a barra de menu) e o conteúdo fica centralizado na altura;
+   só a galeria por nicho, que tem muitos vídeos, passa disso */
+@media (min-width:881px){
+  .janela{min-height:calc(100vh - 130px);min-height:calc(100svh - 130px);display:flex;flex-direction:column}
+  .janela > .conteudo{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:40px}
+  #fotos .conteudo{padding-top:14px;padding-bottom:14px}
+  #trabalhos .conteudo{padding-top:72px} /* mesmo respiro das outras seções entre a barra de pesquisa e o título */
+  #fotos .post-foto{flex-basis:126px}
+  /* ajustes para caber com o menu de duas linhas */
+  .capa .conteudo{padding-top:14px;padding-bottom:14px}
+  .capa h1{font-size:clamp(1.9rem,3.2vw,3.3rem);margin-bottom:14px}
+  .foto-hero{max-width:285px}
+  .capa .spotlight{margin-bottom:16px}
+  #sobre .conteudo{padding-top:12px;padding-bottom:12px}
+  #sobre p{margin-bottom:.6em}
+  #sobre .foto-sobre .midia{min-height:360px}
+  #sobre .resultados-sobre{margin-bottom:14px}
+  #fotos .conteudo{padding-top:12px;padding-bottom:12px}
+  #contato .conteudo{padding-top:16px;padding-bottom:16px}
+  #contato .formulario{gap:5px}
+  #contato .campo textarea{min-height:60px}
+  #contato .intro{margin-bottom:12px}
+  #sobre .conteudo{padding-top:24px;padding-bottom:24px}
+  #sobre p{font-size:.9rem;line-height:1.55;margin-bottom:.8em}
+  #sobre .promessas{margin-top:14px}
+  #sobre .promessas li{padding:7px 0 7px 38px}
+  #sobre .promessas li::before{top:5px}
+  #sobre .resultados-sobre{margin-bottom:18px}
+}
+
+/* ===================== BARRA DE CONTAGEM PARA A BLACK FRIDAY ===================== */
+/* fica fixa logo abaixo do menu, em azul marinho com brilho laranja passando, para se destacar do resto da página */
+.barra-bf{position:fixed;top:0;left:0;right:0;z-index:51;height:42px;display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,22px);
+  padding:0 16px;background:var(--amarelo-bf);color:var(--tinta);overflow:hidden;box-shadow:0 6px 16px -10px rgba(40,59,99,.5)}
+.barra-bf::before{display:none}
+.barra-bf-antigo::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  transform:translateX(-100%);animation:brilho-bf 4.5s ease-in-out infinite;pointer-events:none}
+@keyframes brilho-bf{60%,100%{transform:translateX(100%)}}
+.barra-bf > *{position:relative}
+.bf-selo{flex:0 0 auto;padding:4px 11px;border-radius:999px;background:none;color:var(--tinta);padding:0;font-family:var(--fonte-titulo);font-weight:900;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;animation:none}
+@keyframes pulso-bf{50%{box-shadow:0 0 0 6px rgba(40,59,99,.18)}}
+.bf-contagem{flex:0 0 auto;font-family:var(--fonte-titulo);font-weight:700;font-size:.9rem;white-space:nowrap}
+.bf-contagem strong{display:inline-block;min-width:1.6em;padding:1px 7px;margin:0 2px;border-radius:6px;background:none;color:var(--tinta);padding:0;min-width:0;font-weight:900;text-align:center}
+.bf-relogio{margin-left:6px;font-variant-numeric:tabular-nums;font-weight:700;font-size:.8rem;opacity:.7}
+.bf-frase{min-width:0;font-size:.88rem;font-weight:600;color:var(--tinta);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .4s ease,transform .4s ease}
+.bf-frase.trocando{opacity:0;transform:translateY(6px)}
+.bf-cta{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:none;color:var(--tinta);text-decoration:underline;text-underline-offset:3px;text-decoration:none;font-family:var(--fonte-titulo);font-weight:800;font-size:.78rem;white-space:nowrap;transition:transform .2s}
+/* botão da barra amarela: caixa azul com letra branca, piscando para chamar atenção */
+/* selo BLACK FRIDAY em destaque: caixa azul com letra amarela, combinando com o botão */
+.barra-bf .bf-selo{background:var(--tinta);color:var(--amarelo-bf);padding:5px 12px;border-radius:8px;font-size:.78rem;letter-spacing:.2em}
+.barra-bf .bf-cta{background:var(--tinta);color:#fff;text-decoration:none;border-radius:8px;padding:6px 14px;animation:piscar-cta 1.4s ease-in-out infinite}
+.barra-bf .bf-cta:hover{transform:translateX(3px);animation:none}
+@keyframes piscar-cta{50%{background:var(--laranja-botao);box-shadow:0 0 0 4px rgba(255,255,255,.55)}}
+@media (max-width:1180px){.bf-frase{display:none}}
+@media (max-width:600px){.bf-relogio{display:none}.bf-selo{display:none}.bf-contagem{font-size:.8rem}.bf-cta{padding:5px 10px;font-size:.72rem}}
+
+/* ===================== ANIMAÇÃO DE ENTRADA ===================== */
+.js .revelar{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .revelar.visivel{opacity:1;transform:none}
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width:1020px){
+  .servicos-grade{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:880px){
+  .bf-grade{grid-template-columns:1fr}
+  .funil{grid-template-columns:1fr}
+  .etapa{grid-column:auto}
+  .barra.safari{grid-template-columns:auto 1fr}
+  .barra.safari .icones{display:none}
+  .capa-grade,.sobre-grade,.contato-grade{grid-template-columns:1fr;gap:40px}
+  .coluna-foto{position:static}
+  .foto-sobre .midia{flex:none;aspect-ratio:4/5;min-height:0}
+  .foto-hero{display:flex;flex-direction:column;max-width:380px}
+  .selos{order:2;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+  .selos li{position:static;animation:none;max-width:none}
+  .foto-sobre{max-width:360px}
+  .destaques-grade{grid-template-columns:1fr}
+  /* no celular: título, depois o carrossel, depois as infos do vídeo */
+  .coluna-destaques{display:contents}
+  .coluna-destaques > .revelar{order:-2}
+  .carrossel{order:-1}
+}
+@media (max-width:600px){
+  .campos-duplos{grid-template-columns:1fr}
+  body{font-size:16px}
+  .barra{grid-template-columns:auto 1fr;padding:10px 12px}
+  .barra .busca{width:100%}
+  .conteudo{padding:44px 18px}
+  .capa .conteudo{padding-top:28px}
+  .spotlight{font-size:1rem;padding:12px 14px;margin-bottom:28px}
+  .rotulo-topo{letter-spacing:.18em;font-size:.72rem}
+  .botao{width:100%;padding:20px 24px}
+  .botao-link{justify-content:flex-start;padding:12px 4px}
+  .resultados-sobre{grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .resultados-sobre li{padding:10px}
+  .resultados-sobre strong{font-size:1.1rem}
+  .servicos-grade{grid-template-columns:1fr}
+  .filtros{display:flex}
+  .filtro{flex:1 1 auto;padding:8px 10px;font-size:.85rem}
+  .trabalhos-grade{grid-template-columns:repeat(2,1fr);gap:12px}
+  .trabalho .post-acoes svg{width:18px;height:18px}
+  .trabalho .post-acoes{gap:10px}
+  .slide{flex-basis:220px}
+  .trilho{padding:12px calc(50% - 110px)}
+  .seta{width:40px;height:40px}
+}
+@media (max-width:340px){
+  .trabalhos-grade{grid-template-columns:1fr}
+}
+
+/* respeita quem prefere menos movimento */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .js .revelar{opacity:1;transform:none}
+  .faixa-trilho{animation:none;flex-wrap:wrap;width:auto;justify-content:center;padding:0 12px;row-gap:8px}
+}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ===================== CONTAGEM PARA A BLACK FRIDAY (data e frases no script, em blackFridayData e frasesBlack) ===================== -->
+<div class="barra-bf" role="region" aria-label="Contagem regressiva para a Black Friday">
+  <span class="bf-selo">Black Friday</span>
+  <span class="bf-contagem" id="bf-contagem">Faltam <strong id="bf-dias">00</strong> dias<span class="bf-relogio" id="bf-relogio" aria-hidden="true"></span></span>
+  <span class="bf-frase" id="bf-frase" aria-live="off"></span>
+  <a class="bf-cta" href="#contato">Garantir minha vaga <span aria-hidden="true">→</span></a>
+</div>
+
+<!-- ===================== BARRA DE MENU ===================== -->
+<header class="topo">
+  <!-- linha 1: nome, links principais, idioma e botão de contato -->
+  <div class="topo-interno">
+    <a href="#inicio" class="marca-nome marca-topo"><span class="marca-texto"><strong>Aline Abreu</strong><small>UGC Creator &amp; Content Strategist</small></span></a>
+    <nav class="menu" id="menu-principal" aria-label="Menu principal">
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#destaques">Resultados</a></li>
+        <li><a href="#black-friday" class="link-bf">Black Friday</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <button class="sanduiche" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><span></span></button>
+  </div>
+  <!-- linha 2: atalhos para cada nicho (vêm do array nichos no script) e para as fotos -->
+  <nav class="topo-explore" aria-label="Explore por nicho">
+    <span class="explore-rotulo">Explore</span>
+    <ul id="lista-nichos"></ul>
+    <!-- troca de idioma e atalho para o formulário -->
+    <div class="acoes-topo">
+      <div class="idioma" role="group" aria-label="Idioma do site">
+        <button type="button" data-idioma="pt" aria-pressed="true">PT</button>
+        <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#contato" class="trabalhe">Crie comigo</a>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===================== 1. CAPA ===================== -->
+  <section class="janela janela-escura capa" id="inicio" aria-labelledby="titulo-capa">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>ugc creator que entende de estratégia</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="capa-grade">
+        <div class="revelar">
+          <span class="rotulo-topo">Aline Abreu / UGC Creator &amp; Content Strategist | São Paulo, SP</span>
+          <!-- Busca no estilo Spotlight, só decorativa -->
+          <div class="spotlight" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <span><span id="digitando">ugc creator que faz minha marca vender</span><span class="cursor"></span></span>
+          </div>
+          <h1 id="titulo-capa">Seu produto é a <em>escolha ideal</em>. <span class="linha2">Meu conteúdo <em>mostra o porquê</em>.</span></h1>
+          <p class="frase">Crio conteúdos com <strong>olhar criativo e estratégico</strong>, que <strong>geram identificação</strong> e mostram o porquê sua marca é a escolha ideal.</p>
+          <div class="botoes">
+            <a href="#destaques" class="botao botao-primario">Ver conteúdos que convertem <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <a href="#contato" class="botao botao-link"><span>Quero esse resultado na minha marca</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+        </div>
+
+        <div class="foto-hero revelar">
+        <!-- Os cartõezinhos em volta da foto vêm do array numerosCapa no script -->
+        <ul class="selos" id="numeros-capa"></ul>
+        <!-- foto em formato de post do Instagram (os ícones de baixo são preenchidos pelo script) -->
+        <div class="previa post-insta">
+          <div class="post-topo" aria-hidden="true">
+            <span class="post-avatar"><img src="foto-capa.jpg" alt=""></span>
+            <span class="post-quem"><strong>alineabreuugc</strong><small>São Paulo, Brasil</small></span>
+            <span class="post-mais">•••</span>
+          </div>
+          <figure>
+            <!--
+              FOTO DA CAPA: o arquivo foto-capa.jpg precisa ficar na mesma pasta do index.html.
+              Para trocar, salve a nova foto nessa pasta e mude o nome no src abaixo.
+              object-position escolhe que parte da foto aparece (50% 45% = centro, um pouco para cima).
+            -->
+            <div class="midia r45">
+              <img src="foto-capa.jpg" alt="Aline Abreu sorrindo, de blusa vermelha, apoiada em uma mesa de mármore" width="720" height="1280" style="object-position:50% 45%">
+            </div>
+          </figure>
+          <div data-acoes></div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faixa com os tipos de conteúdo, no formato do Dock (array tiposConteudo no script) -->
+    <div class="dock" aria-label="Tipos de conteúdo que eu crio">
+      <div class="faixa-trilho" id="faixa-marcas"></div>
+    </div>
+  </section>
+
+  <!-- ===================== 2. SOBRE MIM ===================== -->
+  <section class="janela" id="sobre" aria-labelledby="titulo-sobre">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>quem está por trás dos conteúdos que convertem</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="sobre-grade">
+        <div class="coluna-foto revelar">
+          <!-- foto em formato de post do Instagram -->
+          <div class="foto-sobre post-insta">
+            <div class="post-topo" aria-hidden="true">
+              <span class="post-avatar"><img src="foto-capa.jpg" alt=""></span>
+              <span class="post-quem"><strong>alineabreuugc</strong><small>Bastidores</small></span>
+              <span class="post-mais">•••</span>
+            </div>
+            <!--
+              FOTO DO SOBRE: o arquivo foto-sobre-2.jpg precisa ficar na mesma pasta do index.html.
+            -->
+            <div class="midia r45">
+              <img src="foto-sobre-2.jpg" alt="Aline Abreu sorrindo, de top estampado e calça vermelha, em frente a um prédio com palmeiras" width="731" height="1300" loading="lazy" style="object-position:50% 45%">
+            </div>
+            <div data-acoes></div>
+          </div>
+        </div>
+        <div class="revelar">
+          <h2 class="titulo-secao" id="titulo-sobre">Oiie, eu sou a <em>Aline!</em></h2>
+          <p>Tenho 28 anos, sou de São Paulo, cineasta por formação e estrategista de conteúdo, com <strong class="destaque">8 anos entre audiovisual e marketing</strong>. Junto esse <strong class="destaque">olhar criativo e estratégico</strong> com a minha <strong class="destaque">vivência de consumidora</strong> para criar conteúdos com storytelling que <strong class="destaque">gera identificação e converte</strong>.</p>
+
+          <p class="grupo-titulo">Criei estratégias para redes sociais, calendários AON e campanhas, ações com influenciadores para marcas:</p>
+          <ul class="tags"><li>Acer Brasil</li><li>Predator Gaming</li><li>Acer Latam</li><li>Ligga</li><li>Ligga Play</li><li>E-commerce Brasil</li></ul>
+          <p class="chamada-resultados">Em E-commerce Brasil, comparado ao trimestre anterior, gerei um resultado de:</p>
+          <ul class="resultados-sobre" aria-label="Resultados para a E-commerce Brasil">
+            <li><strong>7,5M</strong><span>visualizações</span></li>
+            <li><strong>+47,2%</strong><span>seguidores</span></li>
+            <li><strong>+199,7%</strong><span>interações</span></li>
+          </ul>
+
+          <p class="grupo-titulo">No audiovisual, trabalhei com edição de vídeo e direção criativa assistente em publicidade, documentários e redes sociais para marcas:</p>
+          <ul class="tags"><li>O Boticário</li><li>Mercado Livre</li><li>Grupo Abril</li><li>Gringo</li><li>Natura</li><li>Mercado Pago</li><li>Brasil Paralelo</li></ul>
+
+          <p>Fora do trabalho, amo <strong class="destaque">corrida, musculação, dança, pilates e yoga</strong> (se deixar, faço todas!). Também cuido da alimentação no meu <strong class="destaque">processo de emagrecimento</strong> e do cabelo, desde que comecei a <strong class="destaque">enfrentar a queda capilar</strong>.</p>
+          <ul class="promessas">
+            <li>Roteiro aprovado por você antes de eu gravar</li>
+            <li>Uma rodada de ajuste inclusa em cada entrega</li>
+            <li>Entrega em até 7 dias úteis após o recebimento do produto</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. CONTEÚDOS DE DESTAQUE ===================== -->
+  <section class="janela" id="destaques" aria-labelledby="titulo-destaques">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>ugc creator com resultados reais</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <!--
+        Os vídeos são montados pelo array "destaques" no script.
+        Lá, o campo "link" é onde entra o link do vídeo (TikTok ou Instagram):
+        o vídeo aparece tocando aqui direto do TikTok ou do YouTube.
+      -->
+      <div class="destaques-grade">
+        <!-- título e infos ficam juntos na coluna da esquerda, ao lado do carrossel -->
+        <div class="coluna-destaques">
+          <div class="revelar">
+            <h2 class="titulo-secao" id="titulo-destaques">Por trás de cada view, <em class="linha">uma estratégia.</em></h2>
+            <p class="intro">Ganchos que despertam curiosidade, histórias que geram identificação e conteúdos que performam.</p>
+            <p class="nota-autoral"><span>Conteúdos autorais do meu próprio perfil com resultados orgânicos</span></p>
+          </div>
+          <div class="info-video" id="info-video" aria-live="polite"></div>
+        </div>
+        <div class="carrossel" role="region" aria-roledescription="carrossel" aria-label="Vídeos de destaque">
+          <button class="seta seta-ant" type="button" id="seta-ant" aria-label="Vídeo anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="trilho" id="trilho"></div>
+          <button class="seta seta-prox" type="button" id="seta-prox" aria-label="Próximo vídeo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          <div class="pontos" id="pontos"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLACK FRIDAY (funil de conteúdo) ===================== -->
+  <section class="janela" id="black-friday" aria-labelledby="titulo-bf">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>conteúdo ugc para vender mais na black friday</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="bf-grade">
+        <div class="revelar">
+          <span class="selo-bf">Black Friday</span>
+          <h2 class="titulo-secao" id="titulo-bf">Sua Black Friday, <em class="linha">do scroll ao carrinho.</em></h2>
+          <p class="intro">Alguns exemplos do que a sua marca pode ter na Black Friday: a receita que desperta desejo, o review que tira a dúvida e o cupom que fecha a venda. E dá para criar muito mais, sob medida para o seu produto e cada etapa do funil.</p>
+          <!-- chamada final da Black Friday: convida para os pacotes de funil completo -->
+          <a class="chamada-bf" href="#contato">
+            <span class="chamada-bf-texto"><strong>Funil completo para a sua Black Friday</strong>
+            <span>Do roteiro à entrega, antes do pico de vendas.</span></span>
+            <em>Ver pacotes →</em>
+          </a>
+        </div>
+        <!-- os vídeos vêm dos arrays etapasFunil e blackFriday no script -->
+        <div class="funil" id="funil"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. TRABALHOS POR NICHO ===================== -->
+  <section class="janela" id="trabalhos" aria-labelledby="titulo-trabalhos">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>ugc creator que já criou para o meu nicho</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="revelar">
+        <h2 class="titulo-secao" id="titulo-trabalhos">Conteúdo que fala a língua <em class="linha">do seu nicho.</em></h2>
+        <p class="intro">Escolha o segmento da sua marca e veja como transformo produto em desejo, do primeiro segundo até o clique de compra.</p>
+      </div>
+      <div class="filtros" id="filtros" role="group" aria-label="Filtrar trabalhos por nicho"></div>
+      <p class="sr-only" id="aviso-filtro" aria-live="polite"></p>
+      <div class="trabalhos-grade" id="trabalhos-grade"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FOTOS UGC (mural) ===================== -->
+  <section class="janela" id="fotos" aria-labelledby="titulo-fotos">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>fotos ugc que deixam o produto irresistível</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="revelar">
+        <h2 class="titulo-secao" id="titulo-fotos">Fotos que fazem <em class="linha">o produto vender sozinho.</em></h2>
+        <p class="intro">Lifestyle, detalhe e produto em uso: imagens para site, anúncio, catálogo e redes sociais.</p>
+      </div>
+      <!-- as fotos vêm do array fotosUgc no script: metade em cada faixa -->
+      <div class="faixas-fotos">
+        <div class="mural" id="mural-1" aria-label="Fotos UGC, primeira faixa"></div>
+        <div class="mural" id="mural-2" aria-label="Fotos UGC, segunda faixa"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. COMO EU TE AJUDO ===================== -->
+  <section class="janela" id="servicos" aria-labelledby="titulo-servicos">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>o que uma ugc creator pode fazer pela minha marca</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="revelar">
+        <h2 class="titulo-secao" id="titulo-servicos">Como eu <em>te ajudo</em></h2>
+        <p class="intro">Do roteiro ao clique: os formatos que eu crio para a sua marca chamar atenção, gerar confiança e vender.</p>
+      </div>
+      <ul class="servicos-grade revelar" id="servicos-grade"></ul>
+    </div>
+  </section>
+
+  <!-- ===================== 7. BORA CRIAR JUNTOS ===================== -->
+  <section class="janela" id="contato" aria-labelledby="titulo-contato">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>como contratar a aline abreu</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="revelar">
+        <h2 class="titulo-secao" id="titulo-contato">Qual história incrível <em class="linha">vamos criar juntos?</em></h2>
+        <p class="intro">Me conta onde a sua marca quer chegar e eu desenho o conteúdo que leva ela até lá, do gancho à venda. Respondo em até 48h.</p>
+      </div>
+      <div class="contato-grade">
+        <div class="revelar">
+          <!--
+            Este formulário mostra a confirmação na tela, mas não envia e-mail sozinho.
+            Para receber as mensagens, crie um formulário grátis no Formspree e
+            troque o envio no script (procure por "ENVIO DO FORMULÁRIO").
+          -->
+          <form class="formulario" id="form-contato" novalidate>
+            <div class="campo">
+              <label for="c-nome">Seu nome</label>
+              <input id="c-nome" name="nome" type="text" autocomplete="name" required>
+              <p class="erro" id="erro-c-nome"></p>
+            </div>
+            <div class="campo">
+              <label for="c-whats">Seu WhatsApp</label>
+              <input id="c-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required>
+              <p class="erro" id="erro-c-whats"></p>
+            </div>
+            <div class="campo">
+              <label for="c-email">Seu e-mail</label>
+              <input id="c-email" name="email" type="email" autocomplete="email" required>
+              <p class="erro" id="erro-c-email"></p>
+            </div>
+            <div class="campos-duplos">
+              <div class="campo">
+                <label for="c-marca">Marca</label>
+                <input id="c-marca" name="marca" type="text" autocomplete="organization" required>
+                <p class="erro" id="erro-c-marca"></p>
+              </div>
+              <div class="campo">
+                <label for="c-orcamento">Orçamento estimado</label>
+                <input id="c-orcamento" name="orcamento" type="text" placeholder="Ex.: R$ 2.500" required>
+                <p class="erro" id="erro-c-orcamento"></p>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="c-msg">Mensagem</label>
+              <textarea id="c-msg" name="mensagem" required placeholder="Produto, formato, prazo, objetivo de campanha"></textarea>
+              <p class="erro" id="erro-c-msg"></p>
+            </div>
+            <p class="aviso-form" id="aviso-contato" role="alert" hidden>Não é possível enviar a mensagem: preencha os campos obrigatórios marcados acima.</p>
+            <div><button type="submit" class="botao botao-primario">Enviar mensagem <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div>
+          </form>
+          <div class="confirmacao" id="confirmacao-contato" hidden tabindex="-1">
+            <strong>Mensagem recebida!</strong>
+            Obrigada pelo contato. Já já eu te respondo no e-mail que você deixou.
+          </div>
+        </div>
+        <div class="canais revelar" id="canais"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PERGUNTAS FREQUENTES ===================== -->
+  <section class="janela" id="faq" aria-labelledby="titulo-faq">
+    <div class="barra safari" aria-hidden="true">
+      <span class="lado-esq"><span class="semaforo"><i></i><i></i><i></i></span><span class="icones"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14"/></svg><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+      <span class="busca"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span>dúvidas antes de contratar uma ugc creator</span><svg class="recarregar" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></span>
+      <span class="lado-dir icones"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m8 7 4-4 4 4"/><path d="M6 11v9h12v-9"/></svg><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></span>
+    </div>
+    <div class="conteudo">
+      <div class="revelar">
+        <h2 class="titulo-secao" id="titulo-faq">Perguntas <em class="linha">frequentes</em></h2>
+        <p class="intro">O que as marcas mais perguntam antes de fechar um conteúdo comigo.</p>
+      </div>
+      <!-- cada pergunta abre e fecha ao clicar; para adicionar outra, copie um bloco details inteiro -->
+      <div class="faq revelar">
+        <details open>
+          <summary>Como posso usar o conteúdo?</summary>
+          <p>Nas redes sociais, tráfego pago (ads), catálogos, sites, e-commerces e marketplaces.</p>
+        </details>
+        <details>
+          <summary>Tempo de entrega?</summary>
+          <p>Prazo padrão de entrega de até 7 dias úteis após o recebimento do produto.</p>
+        </details>
+        <details>
+          <summary>Tem exclusividade?</summary>
+          <p>A exclusividade pode ser negociada mediante ajuste contratual.</p>
+        </details>
+        <details>
+          <summary>Por quanto tempo posso usar o conteúdo?</summary>
+          <p>Uso orgânico vitalício para redes sociais e marketplaces. Para uso em tráfego pago, o prazo é de 3 meses.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== 8. RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="interno">
+    <a href="#inicio" class="marca-nome">Aline Abreu <span class="cargo-rodape">| UGC Creator &amp; Content Strategist</span></a>
+    <ul class="redes" id="redes-rodape"></ul>
+    <small>© <span id="ano"></span> Aline Abreu · UGC Creator &amp; Content Strategist</small>
+  </div>
+</footer>
+
+<!-- ===================== CARD DE CAPTURA (tabela de investimentos) ===================== -->
+<div class="fundo-modal" id="fundo-modal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
+    <div class="barra">
+      <span class="semaforo"><button class="fechar" type="button" id="fechar-modal" aria-label="Fechar"></button><i></i><i></i></span>
+      <span class="nome-arquivo" aria-hidden="true">tabela-de-investimentos</span>
+      <span></span>
+    </div>
+    <div class="corpo">
+      <h2 id="titulo-modal">Quer receber minha tabela de investimentos + opções de pacotes UGC?</h2>
+      <p>Preenche aqui que eu te mando os valores, os formatos e os pacotes pensados para a sua marca.</p>
+      <form class="formulario" id="form-kit" novalidate>
+        <div class="campo">
+          <label for="k-nome">Nome</label>
+          <input id="k-nome" name="nome" type="text" autocomplete="name" required>
+          <p class="erro" id="erro-k-nome"></p>
+        </div>
+        <div class="campo">
+          <label for="k-email">E-mail</label>
+          <input id="k-email" name="email" type="email" autocomplete="email" required>
+          <p class="erro" id="erro-k-email"></p>
+        </div>
+        <div class="campos-duplos">
+          <div class="campo">
+            <label for="k-marca">Nome da marca</label>
+            <input id="k-marca" name="marca" type="text" autocomplete="organization" required>
+            <p class="erro" id="erro-k-marca"></p>
+          </div>
+          <div class="campo">
+            <label for="k-whats">WhatsApp</label>
+            <input id="k-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required>
+            <p class="erro" id="erro-k-whats"></p>
+          </div>
+        </div>
+        <div><button type="submit" class="botao botao-primario">Quero receber a tabela <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div>
+      </form>
+      <div class="confirmacao" id="confirmacao-kit" hidden tabindex="-1">
+        <strong>Prontinho!</strong>
+        Sua tabela de investimentos e as opções de pacotes vão chegar no seu e-mail em breve.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   DADOS DO PORTFÓLIO
+   Edite só aqui embaixo para trocar textos, números e trabalhos.
+   Tudo que está escrito em MAIÚSCULAS ou com XX é placeholder para trocar.
+   ===================================================================== */
+
+/* Seus contatos */
+const contato = {
+  instagram: "alineabreuugc",
+  instagramContato: "alinevabreuu",  /* perfil que aparece no botão de Instagram do contato e no rodapé */
+  email: "alineabreuparcerias@gmail.com",
+  whatsapp: "5511954501580",          // com 55 + DDD, só números
+  whatsappVisivel: "(11) 95450-1580",
+  tiktok: "@aline.vabreu"
+};
+
+/* Contagem para a Black Friday: data do evento e frases que vão trocando na barra do topo */
+const blackFridayData = new Date(2026, 10, 27, 0, 0, 0); /* 27 de novembro de 2026 (o mês começa em 0: 10 = novembro) */
+const frasesBlack = [
+  "Vídeos que vendem todo dia",
+  "Poucas vagas para gravar em novembro",
+  "Entrega antes do pico das vendas",
+  "Pacotes para o funil completo",
+  "Criativos que prendem",
+  "Reserve sua agenda de novembro"
+];
+
+/* Cartõezinhos que flutuam em volta da foto da capa (eles se espalham pelos
+   dois lados da foto, na ordem: esquerda, direita, esquerda, direita) */
+const numerosCapa = [
+  { icone: "📈", valor: "2 anos", rotulo: "criando estratégias de conteúdo" },
+  { icone: "🎬", valor: "6 anos", rotulo: "no mercado audiovisual" },
+  { icone: "📱", valor: "+ de 281 mil", rotulo: "views geradas no TikTok" },
+  { icone: "🏃‍♀️", valor: "Corredora", rotulo: "apaixonada por corrida" }
+];
+
+/* Frase que aparece sendo digitada na busca da capa */
+const fraseBusca = "ugc creator que faz minha marca vender";
+
+/* Tipos de conteúdo que passam na faixa embaixo da capa */
+const tiposConteudo = [
+  "Storytelling criativo que prende",
+  "Ads que convertem",
+  "TikTok Shop que vende",
+  "Estratégia de conteúdo",
+  "Fotos lifestyle que geram desejo",
+  "UGC para e-commerce"
+];
+
+/* Vídeos de destaque (carrossel; as infos do vídeo do meio aparecem ao lado).
+   link: ONDE ENTRA O LINK DO VÍDEO (TikTok ou Instagram). O vídeo toca direto no portfólio.
+   som: true deixa o áudio ligado naquele vídeo (sem isso, os vídeos do TikTok tocam mudos).
+   youtube (opcional): link do mesmo vídeo no YouTube. O post continua sendo do Instagram (link),
+   mas toca pelo YouTube, porque o Instagram não deixa vídeo com música tocar fora do app.
+   video (opcional): nome de um arquivo .mp4 salvo na mesma pasta (ex.: video: "zaya.mp4").
+   Quando existir, ele toca no lugar do player do TikTok ou do Instagram, sem a moldura deles.
+   Para adicionar outro vídeo, copie um bloco inteiro entre { } e troque os textos. */
+const destaques = [
+  {
+    titulo: "4 sinais de que eu estava ficando calva",
+    views: "113 mil", interacoes: "1.181",
+    ideia: "Compartilhar sinais de queda capilar que eu não havia percebido na época, ajudando outras pessoas a reconhecer situações semelhantes.",
+    estrategia: [
+      "Gancho visual e escrito impactante para despertar curiosidade logo nos primeiros segundos.",
+      "Conteúdo de valor para reter a atenção de quem enfrenta o mesmo problema.",
+      "Identificação com uma dor específica, conectando meu relato à experiência da audiência."
+    ],
+    link: "https://www.tiktok.com/@aline.vabreu/photo/7676221892822453524"
+  },
+  {
+    titulo: "Emagreci 13 kg e perdi metade do meu cabelo",
+    views: "23 mil", interacoes: "625",
+    ideia: "Relatar minha experiência com a queda capilar após perder 13 kg, conectando o processo de emagrecimento a uma consequência que muitas pessoas podem vivenciar.",
+    estrategia: [
+      "Gancho escrito altamente curioso, combinando emagrecimento e queda capilar para despertar interesse.",
+      "Storytelling pessoal para apresentar minha experiência de forma autêntica.",
+      "Identificação pelo relato, aproximando o conteúdo de pessoas que passaram por situações semelhantes."
+    ],
+    link: "https://www.tiktok.com/@aline.vabreu/video/7659037452362894612", som: true
+  },
+  {
+    titulo: "Perdi metade do meu cabelo: meu tratamento para calvície feminina e eflúvio telógeno",
+    views: "37 mil", interacoes: "1.558",
+    ideia: "Apresentar os medicamentos utilizados no meu tratamento para queda capilar, compartilhando minha experiência com calvície feminina e eflúvio telógeno.",
+    estrategia: [
+      "Gancho visual e escrito impactante para despertar curiosidade e incentivar a audiência a continuar assistindo.",
+      "Conteúdo informativo para compartilhar minha experiência e apresentar o tratamento.",
+      "Identificação com a audiência, criando conexão com pessoas que também buscam informações sobre queda capilar."
+    ],
+    link: "https://www.tiktok.com/@aline.vabreu/photo/7675088961613794580"
+  },
+  {
+    titulo: "Minha primeira aula de yoga na Zaya",
+    views: "6,2 mil", interacoes: "148",
+    ideia: "Mostrar minha primeira experiência em uma aula de yoga na Zaya, partindo da minha relação pessoal com atividades físicas para apresentar o serviço de forma natural.",
+    estrategia: [
+      "Storytelling baseado em experiência pessoal para construir uma narrativa autêntica.",
+      "Identificação com os interesses da audiência, aproximando o público da proposta da aula.",
+      "Apresentação do serviço como solução, integrando a marca à história em vez de apenas divulgar a experiência."
+    ],
+    link: "https://www.instagram.com/p/DbML2QJs-qF/", marca: "Zaya Wellness",
+    youtube: "https://youtube.com/shorts/HQez_mR8vHY"
+  }
+];
+
+/* Nichos dos filtros. A cor é a da bolinha. */
+const nichos = [
+  { id: "fitness",     nome: "Fitness",              cor: "#E85A23" },
+  { id: "alimentacao", nome: "Alimentação saudável", cor: "#FD8C89" },
+  { id: "tech",        nome: "Tech",                 cor: "#8FA3CF" },
+  { id: "experiencias",nome: "Experiências",         cor: "#EE8E53" }
+];
+
+/* Galeria de trabalhos. nicho precisa ser um dos ids acima.
+   youtube: link do vídeo no YouTube (Shorts). O vídeo só carrega quando a pessoa clica.
+   capa (opcional): imagem própria da pasta capas (ex.: "capas/dobro.jpg"). Sem ela, usa a capa do YouTube. */
+const trabalhos = [
+  { titulo: "Energia que dura o treino inteiro",              marca: "Dobro",          nicho: "fitness",      youtube: "https://youtube.com/shorts/mlB-oa2xXnI", capa: "capas/dobro.jpg" },
+  { titulo: "A semana inteira resolvida com marmitas",        marca: "Liv Up",         nicho: "alimentacao",  youtube: "https://youtube.com/shorts/s7xEvSe3C78", capa: "capas/livup.jpg" },
+  { titulo: "Bolo de pote proteico pronto em minutos",        marca: "Bold",           nicho: "alimentacao",  youtube: "https://youtube.com/shorts/NBbFmt_toDw" },
+  { titulo: "As promoções que valem o clique",                marca: "Mercado Livre",  nicho: "tech",         youtube: "https://youtube.com/shorts/_oz2mi0gOUM", capa: "capas/mercadolivre.jpg" },
+  { titulo: "Minha primeira aula de yoga",                    marca: "Zaya Wellness",  nicho: "experiencias", youtube: "https://youtube.com/shorts/HQez_mR8vHY" },
+  { titulo: "Como economizar no delivery",                    marca: "99Food",         nicho: "tech",         youtube: "https://youtube.com/shorts/IolwFmPmeec", capa: "capas/99food-aline.jpg" },
+  { titulo: "A creatina que entrou de vez na minha rotina",   marca: "Growth",         nicho: "fitness",      youtube: "https://youtube.com/shorts/HYfSDgZZnqI", capa: "capas/growth.jpg" },
+  { titulo: "Frango desfiado que vira receita fit fácil",     marca: "Seara",          nicho: "alimentacao",  youtube: "https://youtube.com/shorts/Jdgx1uYqu6k" },
+  { titulo: "Proteína em forma de goma (sim, existe!)",       marca: "Ayna",           nicho: "fitness",      youtube: "https://youtube.com/shorts/cKotTcHEDbk", capa: "capas/ayna.jpg" },
+  { titulo: "Brigadeiro proteico para matar a vontade",       marca: "YoPro",          nicho: "alimentacao",  youtube: "https://youtube.com/shorts/rYelfuFn4wE" },
+  { titulo: "Vivi a experiência de perto",                    marca: "F Station",      nicho: "experiencias", youtube: "https://youtube.com/shorts/lOQI-ys9wwg" },
+  { titulo: "Cada quilômetro da Run Longer",                  marca: "Athenas",        nicho: "experiencias", youtube: "https://youtube.com/shorts/c6YlryEHypw" },
+  { titulo: "A emoção de buscar o kit da Stronger",           marca: "Athenas",        nicho: "experiencias", youtube: "https://youtube.com/shorts/vtsdMDnY_Dk" }
+];
+
+/* Black Friday: etapas do funil e os vídeos de cada uma.
+   etapa precisa ser "topo", "meio" ou "fundo". Dentro de cada etapa, a ordem é a do array. */
+const etapasFunil = [
+  { id: "topo",  nome: "Topo de funil",  objetivo: "Atenção e desejo" },
+  { id: "meio",  nome: "Meio de funil",  objetivo: "Consideração e confiança" },
+  { id: "fundo", nome: "Fundo de funil", objetivo: "Conversão" }
+];
+const blackFriday = [
+  { etapa: "meio",  marca: "Dobro",         titulo: "Gel de carboidrato Dobro",                      youtube: "https://youtube.com/shorts/mlB-oa2xXnI", capa: "capas/dobro.jpg",
+    descricao: "Educar sobre estratégia nutricional na corrida, gerar confiança por meio da experiência pessoal e estimular o interesse pelo produto." },
+  { etapa: "meio",  marca: "Mercado Livre", titulo: "Compras de treino e corrida no Mercado Livre",  youtube: "https://youtube.com/shorts/_oz2mi0gOUM", capa: "capas/mercadolivre.jpg",
+    descricao: "Apresentar produtos recomendados, destacar seus benefícios e estimular a consideração de compra." },
+  { etapa: "fundo", marca: "99Food",        titulo: "99Food: promoções e cupons",                    youtube: "https://youtube.com/shorts/IolwFmPmeec", capa: "capas/99food-aline.jpg",
+    descricao: "Apresentar a plataforma como solução para economizar no pedido e incentivar o uso de cupons e promoções." },
+  { etapa: "topo",  marca: "Bold",          titulo: "Bolo de pote proteico\ncom Whey da Bold",           youtube: "https://youtube.com/shorts/NBbFmt_toDw",
+    descricao: "Atrair o público por meio de uma receita prática, gerar identificação e despertar o desejo pelo produto." }
+];
+
+/* Fotos UGC (aparecem como posts do Instagram, em duas faixas: a primeira metade em cima, a segunda embaixo).
+   foto: arquivo na pasta fotos. marca: aparece no topo do post e na legenda (deixe "" se não tiver).
+   posicao: que parte da foto aparece no recorte 4:5 (ex.: "50% 40%" = centro, um pouco para cima). */
+const fotosUgc = [
+  { foto: "fotos/ugc-01.jpg", marca: "Bold",                  legenda: "produto em mãos na cozinha",      posicao: "50% 40%" },
+  { foto: "fotos/ugc-16.jpg", marca: "Dobro",                 legenda: "géis para o dia de prova",          posicao: "50% 40%" },
+  { foto: "fotos/ugc-09.jpg", marca: "Athenas Run Longer",    legenda: "pronta para os 14K",                posicao: "50% 35%" },
+  { foto: "fotos/ugc-18.jpg", marca: "Zaya Wellness",         legenda: "aula de yoga",                      posicao: "50% 60%" },
+  { foto: "fotos/ugc-12.jpg", marca: "",                      legenda: "treino de braço na academia",       posicao: "50% 50%" },
+  { foto: "fotos/ugc-13.jpg", marca: "Ayna",                  legenda: "detalhe da goma",                   posicao: "50% 50%" },
+  { foto: "fotos/ugc-04.jpg", marca: "Live! Run",             legenda: "dia de prova",                      posicao: "50% 50%" },
+  { foto: "fotos/ugc-20.jpg", marca: "",                      legenda: "look do dia",                       posicao: "50% 55%" },
+  { foto: "fotos/ugc-15.jpg", marca: "",                      legenda: "pace conferido antes da corrida",   posicao: "50% 45%" },
+  { foto: "fotos/ugc-11.jpg", marca: "",                      legenda: "rotina de maquiagem",               posicao: "50% 40%" },
+  { foto: "fotos/ugc-14.jpg", marca: "Ayna",                  legenda: "proteína que cabe na mão",          posicao: "50% 45%" },
+  { foto: "fotos/ugc-08.jpg", marca: "Circuito das Estações", legenda: "medalha no Pacaembu",               posicao: "50% 55%" },
+  { foto: "fotos/ugc-10.jpg", marca: "+Mu",                   legenda: "Mulkshake no pós-prova",            posicao: "50% 40%" },
+  { foto: "fotos/ugc-02.jpg", marca: "Bold",                  legenda: "receita na cozinha",                posicao: "50% 45%" },
+  { foto: "fotos/ugc-22.jpg", marca: "",                      legenda: "treino ao ar livre e café gelado",  posicao: "50% 60%" },
+  { foto: "fotos/ugc-19.jpg", marca: "Live! Run",             legenda: "medalha dos 10K",                   posicao: "50% 45%" },
+  { foto: "fotos/ugc-17.jpg", marca: "Conexão Social Media",  legenda: "evento de marketing",               posicao: "50% 45%" },
+  { foto: "fotos/ugc-21.jpg", marca: "",                      legenda: "look do dia",                       posicao: "50% 40%" },
+  { foto: "fotos/ugc-07.jpg", marca: "",                      legenda: "corrida na esteira",                posicao: "50% 50%" },
+  { foto: "fotos/ugc-05.jpg", marca: "Zaya Wellness",         legenda: "bastidores da aula",                posicao: "50% 55%" },
+  { foto: "fotos/ugc-06.jpg", marca: "",                      legenda: "pós-treino na praia",               posicao: "50% 50%" }
+];
+
+/* Serviços (como eu te ajudo) */
+const servicos = [
+  { titulo: "Criativo que prende",              descricao: "Roteiro com gancho forte nos primeiros segundos e uma narrativa que gera identificação do começo ao fim." },
+  { titulo: "Ads que convertem",                descricao: "Vídeos e variações de gancho prontos para tráfego pago, pensados para baixar custo e aumentar o clique." },
+  { titulo: "TikTok Shop que vende",            descricao: "Conteúdo nativo para TikTok Shop, com o produto em uso e um caminho curto até a compra." },
+  { titulo: "UGC para e-commerce",              descricao: "Unboxing, review e demonstração que respondem dúvidas e aumentam a confiança na página do produto." },
+  { titulo: "Fotos lifestyle que geram desejo", descricao: "O produto no dia a dia, com luz natural, para site, catálogo, anúncios e redes sociais." },
+  { titulo: "Estratégia de conteúdo",           descricao: "Pautas, calendário e formatos pensados para cada etapa do funil, do primeiro contato à venda." },
+  { titulo: "Pacotes mensais",                  descricao: "Conteúdo novo todo mês, com calendário combinado, valor fechado e prioridade na agenda para a sua marca nunca ficar sem criativo." },
+  { titulo: "Publipost",                        descricao: "Conteúdo publicado no meu perfil @alinevabreuu, com legenda estratégica e marcação da marca, para alcançar uma audiência que confia na minha indicação." }
+];
+
+/* =====================================================================
+   DAQUI PRA BAIXO É O FUNCIONAMENTO DA PÁGINA (não precisa mexer)
+   ===================================================================== */
+document.documentElement.classList.add("js");
+const reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $ = (s) => document.querySelector(s);
+const esc = (t) => String(t).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+/* bloco de mídia: imagem real se existir, senão degradê com legenda */
+function blocoMidia(imagem, alt, formato, classe, c1, c2) {
+  const conteudo = imagem
+    ? `<img src="${esc(imagem)}" alt="${esc(alt)}" loading="lazy">`
+    : (formato ? `<span class="legenda-formato">${esc(formato)}</span>` : "");
+  const papel = imagem ? "" : ` role="img" aria-label="${esc(alt)}"`;
+  return `<div class="midia ${classe}"${papel} style="--g1:${c1};--g2:${c2}">${conteudo}</div>`;
+}
+
+
+/* busca da capa sendo digitada */
+const campoBusca = $("#digitando");
+if (reduzMovimento) {
+  campoBusca.textContent = fraseBusca;
+} else {
+  campoBusca.textContent = "";
+  let i = 0;
+  setTimeout(function digitar() {
+    campoBusca.textContent = fraseBusca.slice(0, ++i);
+    if (i < fraseBusca.length) setTimeout(digitar, 55 + Math.random() * 60);
+  }, 600);
+}
+
+/* capa */
+$("#numeros-capa").innerHTML = numerosCapa.map(n => `<li><span class="icone" aria-hidden="true">${n.icone}</span><span><strong>${esc(n.valor)}</strong><small>${esc(n.rotulo)}</small></span></li>`).join("");
+const trilhoMarcas = [...tiposConteudo, ...tiposConteudo].map(m => `<span class="marca">${esc(m)}</span>`).join("");
+$("#faixa-marcas").innerHTML = trilhoMarcas + `<span aria-hidden="true" style="display:contents">${trilhoMarcas}</span>`;
+
+/* moldura no estilo de um post do Instagram (cabeçalho com perfil e ações embaixo), usada em todos os vídeos */
+function cabecalhoPost(marca) {
+  return `<div class="post-topo" aria-hidden="true">
+    <span class="post-avatar"><img src="foto-capa.jpg" alt=""></span>
+    <span class="post-quem"><strong>${esc(contato.instagram)}</strong>${marca ? ` e <strong>${esc(marca)}</strong>` : ""}<small>Áudio original</small></span>
+    <span class="post-mais">•••</span>
+  </div>`;
+}
+function acoesPost() {
+  const svg = (d) => `<svg viewBox="0 0 24 24">${d}</svg>`;
+  return `<div class="post-acoes" aria-hidden="true">
+    ${svg('<path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20Z"/>')}
+    ${svg('<path d="M20.5 11.5a8.5 8.5 0 0 1-12.4 7.6L3.5 20.5l1.4-4.4a8.5 8.5 0 1 1 15.6-4.6Z"/>')}
+    ${svg('<path d="m17 2 3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="m7 22-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/>')}
+    ${svg('<path d="M21.5 3 10.5 13.5"/><path d="M21.5 3 15 21l-4.5-7.5L3 9Z"/>')}
+    <span class="salvar">${svg('<path d="M6 3h12v18l-6-4.2L6 21Z"/>')}</span>
+  </div>`;
+}
+
+/* ícones de post embaixo das fotos da capa e do sobre */
+document.querySelectorAll("[data-acoes]").forEach(el => { el.outerHTML = acoesPost(); });
+
+/* destaques: carrossel com os vídeos tocando direto do TikTok e do YouTube */
+const plataforma = (link) => link.includes("instagram") ? "Instagram" : "TikTok";
+const doisDigitos = (n) => String(n).padStart(2, "0");
+/* tocar = false: o vídeo fica parado (nada toca quando a página abre).
+   tocar = true: o vídeo já começa, usado quando a pessoa passa para ele no carrossel. */
+/* de onde o vídeo toca: YouTube (se tiver o campo youtube), TikTok ou Instagram */
+const fonte = (d) => d.youtube ? "youtube" : plataforma(d.link).toLowerCase();
+function enderecoEmbutido(d, tocar) {
+  let m = d.youtube && d.youtube.match(/(?:shorts\/|youtu\.be\/|v=|embed\/)([\w-]{11})/);
+  if (m) return `https://www.youtube-nocookie.com/embed/${m[1]}?autoplay=${tocar ? 1 : 0}&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${m[1]}`;
+  m = d.link.match(/tiktok\.com\/.*\/(?:video|photo)\/(\d+)/);
+  /* sem som, volume_control=0 esconde o botão de volume */
+  if (m) return `https://www.tiktok.com/player/v1/${m[1]}?autoplay=${tocar ? 1 : 0}&volume_control=${d.som ? 1 : 0}&description=0&rel=0&loop=1`;
+  m = d.link.match(/instagram\.com\/(?:p|reel)\/([^/?#]+)/);
+  if (m) return `https://www.instagram.com/p/${m[1]}/embed/`;
+  return "";
+}
+$("#trilho").innerHTML = destaques.map((d, i) => `
+  <div class="slide post-insta ${fonte(d)}${i === 0 ? " ativo" : ""}" data-i="${i}" data-segurar="1" role="group" aria-roledescription="slide" aria-label="${i + 1} de ${destaques.length}: ${esc(d.titulo)}">
+    ${cabecalhoPost(d.marca)}
+    <div class="post-midia">
+    ${d.video
+      ? `<video src="${esc(d.video)}" controls playsinline loop preload="metadata" aria-label="Vídeo: ${esc(d.titulo)}"></video>`
+      : `<iframe src="${enderecoEmbutido(d, false)}" title="Vídeo: ${esc(d.titulo)}" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`}
+    </div>
+    ${acoesPost()}
+  </div>`).join("");
+/* conversa com o player do TikTok:
+   1. o TikTok começa a tocar sozinho (mudo) mesmo com autoplay=0, então a página pausa esse primeiro play
+      automático; se a pessoa der play depois, aí toca normal
+   2. vídeos sem "som: true" ficam sempre mudos
+   3. o vídeo com "som: true" liga o áudio quando começa a tocar */
+const enviar = (e, type) => e.source.postMessage({ "x-tiktok-player": true, type }, e.origin);
+window.addEventListener("message", (e) => {
+  if (!/^https:\/\/(www\.)?tiktok\.com$/.test(e.origin) || !e.data || typeof e.data !== "object") return;
+  const s = [...document.querySelectorAll(".slide")].find(sl => { const f = sl.querySelector("iframe"); return f && f.contentWindow === e.source; });
+  if (!s) return;
+  if (e.data.type === "onStateChange" && e.data.value === 1 && s.dataset.segurar === "1") {
+    s.dataset.segurar = "0";
+    enviar(e, "pause");
+    return;
+  }
+  if (destaques[Number(s.dataset.i)].som) {
+    if (e.data.type === "onStateChange" && e.data.value === 1) enviar(e, "unMute");
+    return;
+  }
+  if (e.data.type === "onPlayerReady" || e.data.type === "onStateChange") {
+    enviar(e, "mute");
+  }
+});
+/* para o vídeo de um card: recarregar o player do TikTok parado é o jeito garantido de calar a música */
+function pararVideo(s) {
+  const d = destaques[Number(s.dataset.i)], v = s.querySelector("video"), f = s.querySelector("iframe");
+  if (v) v.pause();
+  s.dataset.segurar = "1";
+  if (f && fonte(d) !== "instagram") f.src = enderecoEmbutido(d, false);
+}
+function tocarVideo(s) {
+  const d = destaques[Number(s.dataset.i)], v = s.querySelector("video"), f = s.querySelector("iframe");
+  if (v) v.play().catch(() => {});
+  s.dataset.segurar = "0";
+  if (f && fonte(d) !== "instagram") f.src = enderecoEmbutido(d, true);
+}
+$("#pontos").innerHTML = destaques.map((d, i) => `<button type="button" data-i="${i}" aria-label="Ver vídeo ${i + 1}"${i === 0 ? ' aria-current="true"' : ""}></button>`).join("");
+const htmlInfo = (d, i) => `
+    <span class="contagem">${doisDigitos(i + 1)} / ${doisDigitos(destaques.length)}</span>
+    <h3>${esc(d.titulo)}</h3>
+    <ul class="numeros-video">
+      <li><strong>${esc(d.views)}</strong><span>visualizações orgânicas</span></li>
+      <li><strong>${esc(d.interacoes)}</strong><span>interações orgânicas</span></li>
+    </ul>
+    <h4>A estratégia</h4>
+    <ul class="estrategia">${d.estrategia.map(e => `<li>${esc(e)}</li>`).join("")}</ul>`;
+const trilho = $("#trilho"), slides = [...trilho.querySelectorAll(".slide")], infoVideo = $("#info-video");
+let atual = 0;
+infoVideo.innerHTML = htmlInfo(destaques[0], 0);
+/* nada toca sozinho: os vídeos só começam depois que a pessoa mexe no carrossel */
+let pessoaMexeu = false;
+["pointerdown", "touchstart", "wheel", "keydown"].forEach(ev =>
+  $(".carrossel").addEventListener(ev, () => { pessoaMexeu = true; }, { passive: true }));
+trilho.scrollLeft = 0;
+function marcarAtivo(i) {
+  if (i === atual) return;
+  /* um som por vez: o vídeo que saiu do meio para, e o novo do meio começa */
+  pararVideo(slides[atual]);
+  atual = i;
+  slides.forEach((s, j) => s.classList.toggle("ativo", j === i));
+  if (pessoaMexeu) { fecharGaleria(); tocarVideo(slides[i]); }
+  document.querySelectorAll("#pontos button").forEach((b, j) => b.toggleAttribute("aria-current", j === i));
+  $("#seta-ant").disabled = i === 0;
+  $("#seta-prox").disabled = i === slides.length - 1;
+  /* as informações do lado trocam junto com o vídeo do meio */
+  infoVideo.classList.add("trocando");
+  setTimeout(() => { infoVideo.innerHTML = htmlInfo(destaques[i], i); infoVideo.classList.remove("trocando"); }, reduzMovimento ? 0 : 220);
+}
+function irPara(i) {
+  const s = slides[Math.max(0, Math.min(i, slides.length - 1))];
+  trilho.scrollTo({ left: s.offsetLeft - (trilho.clientWidth - s.offsetWidth) / 2, behavior: reduzMovimento ? "auto" : "smooth" });
+}
+$("#seta-ant").disabled = true;
+$("#seta-ant").addEventListener("click", () => irPara(atual - 1));
+$("#seta-prox").addEventListener("click", () => irPara(atual + 1));
+$("#pontos").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) irPara(Number(b.dataset.i)); });
+slides.forEach((s, i) => s.addEventListener("click", () => { if (i !== atual) irPara(i); }));
+/* descobre qual vídeo está no meio do trilho enquanto ele rola */
+let esperaRolagem;
+trilho.addEventListener("scroll", () => {
+  clearTimeout(esperaRolagem);
+  esperaRolagem = setTimeout(() => {
+    const meio = trilho.scrollLeft + trilho.clientWidth / 2;
+    let maisPerto = 0;
+    slides.forEach((s, j) => {
+      if (Math.abs(s.offsetLeft + s.offsetWidth / 2 - meio) < Math.abs(slides[maisPerto].offsetLeft + slides[maisPerto].offsetWidth / 2 - meio)) maisPerto = j;
+    });
+    marcarAtivo(maisPerto);
+  }, 80);
+}, { passive: true });
+/* quando a pessoa rola a página e o carrossel some da tela, o vídeo do meio para */
+if ("IntersectionObserver" in window) {
+  let carrosselVisto = false;
+  new IntersectionObserver((entradas) => {
+    entradas.forEach(en => {
+      if (en.isIntersecting) { carrosselVisto = true; return; }
+      if (carrosselVisto) pararVideo(slides[atual]);
+    });
+  }).observe($(".carrossel"));
+}
+
+/* trabalhos e filtros */
+const nichoPorId = Object.fromEntries(nichos.map(n => [n.id, n]));
+$("#filtros").innerHTML =
+  `<button type="button" class="filtro" data-nicho="todos" aria-pressed="true">Todos</button>` +
+  nichos.map(n => `<button type="button" class="filtro" data-nicho="${n.id}" aria-pressed="false" style="--cor-filtro:${n.cor}"><i aria-hidden="true"></i>${esc(n.nome)}</button>`).join("");
+const idYoutube = (url) => ((url || "").match(/(?:shorts\/|youtu\.be\/|v=|embed\/)([\w-]{11})/) || [])[1];
+/* post de vídeo do YouTube com capa e play (usado na Black Friday e na galeria por nicho) */
+function postYoutube(t, classe, atributos, legenda) {
+  const id = idYoutube(t.youtube);
+  return `<article class="post-insta ${classe}"${atributos}>
+    ${cabecalhoPost(t.marca)}
+    <div class="post-midia">
+      <button type="button" class="capa-video" data-id="${id}" aria-label="Assistir: ${esc(t.marca)}, ${esc(t.titulo)}">
+        <img src="${t.capa ? esc(t.capa) : `https://i.ytimg.com/vi/${id}/oardefault.jpg`}" alt="" loading="lazy" data-id="${id}"${t.capa ? ' data-trocada="1"' : ""}><span class="play" aria-hidden="true"></span>
+      </button>
+    </div>
+    ${acoesPost()}
+    ${legenda}
+  </article>`;
+}
+/* galeria: todos os vídeos juntos, na ordem do array trabalhos; os filtros escondem os de outros nichos */
+$("#trabalhos-grade").innerHTML = trabalhos.map((t) => {
+  const n = nichoPorId[t.nicho] || { nome: t.nicho };
+  return postYoutube(t, "trabalho", ` data-nicho="${esc(t.nicho)}"`,
+    `<p class="post-legenda"><span class="nicho">${esc(n.nome)}</span><strong>${esc(t.marca)}</strong> ${esc(t.titulo)}</p>`);
+}).join("");
+
+/* último card da galeria (só na aba Todos): um post vazio convidando a marca */
+$("#trabalhos-grade").insertAdjacentHTML("beforeend", `<a class="post-insta card-sua-marca" href="#contato">
+    ${cabecalhoPost("Sua marca")}
+    <div class="post-midia sua-marca-midia">
+      <div class="sua-marca-texto">
+        <span class="sua-marca-rotulo">Próximo vídeo</span>
+        <strong>É a sua marca aqui</strong>
+        <span class="sua-marca-cta">Vamos criar algo incrível juntos? ↗</span>
+      </div>
+    </div>
+    ${acoesPost()}
+    <p class="post-legenda"><span class="nicho">Sua vez</span><strong>Sua marca</strong> Vamos criar algo incrível juntos?</p>
+  </a>`);
+
+/* Black Friday: os vídeos agrupados por etapa do funil, na ordem do array */
+$("#funil").innerHTML = etapasFunil.map((etapa, k) => {
+  const videos = blackFriday.filter(v => v.etapa === etapa.id);
+  if (!videos.length) return "";
+  return `<div class="etapa etapa-${etapa.id}" style="--n:${videos.length}">
+    <div class="etapa-cab"><span class="etapa-num">${doisDigitos(k + 1)}</span><span><strong>${esc(etapa.nome)}</strong><small>${esc(etapa.objetivo)}</small></span></div>
+    <div class="etapa-cards">${videos.map(v => postYoutube(v, "", "",
+      `<div class="post-legenda"><strong>${esc(v.titulo)}</strong><p class="desc-funil">${esc(v.descricao)}</p></div>`)).join("")}</div>
+  </div>`;
+}).join("");
+/* uma coluna por vídeo, todas da mesma largura; cada etapa ocupa as colunas dos seus vídeos */
+$("#funil").style.setProperty("--colunas", `repeat(${blackFriday.length}, minmax(0, 1fr))`);
+
+/* capas em alta qualidade: usa a capa vertical do Short (1080x1920); quando o YouTube não tem essa,
+   ele devolve uma imagem minúscula, e aí a página troca pela capa grande horizontal */
+document.querySelectorAll(".capa-video img").forEach(img => {
+  const conferir = (e) => {
+    const pequena = (e && e.type === "error") || (img.naturalWidth && img.naturalWidth < 200);
+    if (pequena && !img.dataset.trocada) {
+      img.dataset.trocada = "1";
+      img.src = `https://i.ytimg.com/vi/${img.dataset.id}/maxresdefault.jpg`;
+    }
+  };
+  img.addEventListener("load", conferir);
+  img.addEventListener("error", conferir);
+  if (img.complete) conferir();
+});
+/* vídeo da galeria: troca a capa pelo player só no clique, e um vídeo por vez */
+let tocandoGaleria = null;
+function fecharGaleria() {
+  if (!tocandoGaleria) return;
+  tocandoGaleria.midia.innerHTML = tocandoGaleria.capa;
+  tocandoGaleria = null;
+}
+document.addEventListener("click", (e) => {
+  const b = e.target.closest(".capa-video");
+  if (!b) return;
+  fecharGaleria();
+  pararVideo(slides[atual]);
+  const midia = b.parentElement, capa = midia.innerHTML, id = b.dataset.id;
+  midia.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1&loop=1&playlist=${id}" title="${b.getAttribute("aria-label")}" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  tocandoGaleria = { midia, capa };
+});
+$("#filtros").addEventListener("click", (e) => {
+  const botao = e.target.closest(".filtro");
+  if (!botao) return;
+  fecharGaleria();
+  const escolhido = botao.dataset.nicho;
+  document.querySelectorAll(".filtro").forEach(b => b.setAttribute("aria-pressed", String(b === botao)));
+  let total = 0;
+  document.querySelectorAll(".trabalho").forEach(card => {
+    const mostra = escolhido === "todos" || card.dataset.nicho === escolhido;
+    card.hidden = !mostra;
+    if (mostra) total++;
+  });
+  $(".card-sua-marca").hidden = escolhido !== "todos";
+  $("#aviso-filtro").textContent = `${total} trabalhos em ${botao.textContent}`;
+});
+
+/* serviços */
+$("#servicos-grade").innerHTML = servicos.map((s, i) => `
+  <li class="servico">
+    <span class="num">${String(i + 1).padStart(2, "0")}</span>
+    <h3>${esc(s.titulo)}</h3>
+    <p>${esc(s.descricao)}</p>
+  </li>`).join("");
+
+/* formato de número em português, usado pelo contador animado */
+const formatar = (v, casas) => v.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
+
+/* fotos UGC: cada foto vira um post do Instagram, divididas em duas faixas que rolam sozinhas.
+   As faixas repetem as fotos em sequência, e quando chegam na metade voltam ao começo sem a pessoa perceber.
+   Param quando o mouse ou o dedo está em cima, e dá para arrastar para o lado. */
+const postFoto = (f, oculto) => `<article class="post-insta post-foto"${oculto ? ' aria-hidden="true"' : ""}>
+    ${cabecalhoPost(f.marca).replace("Áudio original", "São Paulo, Brasil")}
+    <div class="post-midia"><img src="${esc(f.foto)}" alt="${oculto ? "" : esc(f.legenda)}" loading="lazy" style="object-position:${f.posicao || "50% 40%"}"></div>
+    ${acoesPost()}
+    <p class="post-legenda">${f.marca ? `<strong>${esc(f.marca)}</strong> ` : ""}${esc(f.legenda)}</p>
+  </article>`;
+const metadeFotos = Math.ceil(fotosUgc.length / 2);
+[fotosUgc.slice(0, metadeFotos), fotosUgc.slice(metadeFotos)].forEach((lista, k) => {
+  const faixa = $(`#mural-${k + 1}`);
+  faixa.innerHTML = lista.map(f => postFoto(f)).join("") + lista.map(f => postFoto(f, true)).join("");
+  if (reduzMovimento) return;
+  const sentido = k === 0 ? 1 : -1;
+  let pausado = false, ultimo = null, posicao = null;
+  ["mouseenter", "touchstart", "focusin"].forEach(ev => faixa.addEventListener(ev, () => { pausado = true; }, { passive: true }));
+  ["mouseleave", "touchend", "focusout"].forEach(ev => faixa.addEventListener(ev, () => { pausado = false; posicao = faixa.scrollLeft; }, { passive: true }));
+  (function passo(agora) {
+    const metade = faixa.scrollWidth / 2;
+    if (posicao === null && metade > 0) posicao = sentido > 0 ? 0 : metade;
+    if (ultimo !== null && !pausado && posicao !== null) {
+      posicao += sentido * (agora - ultimo) * 0.03;
+      if (posicao >= metade) posicao -= metade;
+      if (posicao < 0) posicao += metade;
+      faixa.scrollLeft = posicao;
+    }
+    ultimo = agora;
+    requestAnimationFrame(passo);
+  })(performance.now());
+});
+
+/* canais de contato e rodapé */
+const icones = {
+  whatsapp: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>',
+  tiktok: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a7.9 7.9 0 0 0 4.4 1.4V6.7a4.5 4.5 0 0 1-4.4-4.7Z"/></svg>',
+  email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.3L4.3 7H4v.6l8 5.6 8-5.6V7h-.3L12 12.3Z"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21 8.1c0-1.6-.4-3-1.6-4.1S16.9 2.5 15.3 2.4c-1.7-.1-6.9-.1-8.6 0C5.1 2.5 3.7 2.8 2.6 4S1.1 6.4 1 8c-.1 1.7-.1 6.9 0 8.6.1 1.6.4 3 1.6 4.1s2.5 1.5 4.1 1.6c1.7.1 6.9.1 8.6 0 1.6-.1 3-.4 4.1-1.6s1.5-2.5 1.6-4.1c.1-1.7.1-6.9 0-8.5Zm-2.1 10.4a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5 .4s-3.7.1-5-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5s-.1-3.7.4-5A3.3 3.3 0 0 1 7 5.6c1.3-.5 4.4-.4 5-.4s3.7-.1 5 .4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5s.1 3.7-.4 5Z"/></svg>'
+};
+const linkWhats = `https://wa.me/${contato.whatsapp}?text=${encodeURIComponent("Oi, Aline! Vi seu portfólio e quero falar sobre um conteúdo.")}`;
+const linkInsta = `https://www.instagram.com/${contato.instagramContato}/`;
+/* e-mail: abre direto a tela de escrever um e-mail no Gmail, com o assunto preenchido (funciona mesmo sem programa de e-mail no computador) */
+const linkEmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(contato.email)}&su=${encodeURIComponent("Parceria UGC com Aline Abreu")}`;
+const linkTiktok = `https://www.tiktok.com/${contato.tiktok}`;
+$("#canais").innerHTML = `
+  <a class="canal" href="${linkWhats}" target="_blank" rel="noopener" style="--cor:#1f7a4d"><span class="icone">${icones.whatsapp}</span><span><strong>WhatsApp</strong><span>${esc(contato.whatsappVisivel)}</span></span></a>
+  <a class="canal" href="${linkEmail}" target="_blank" rel="noopener" style="--cor:var(--coral-texto)"><span class="icone">${icones.email}</span><span><strong>E-mail</strong><span>${esc(contato.email)}</span></span></a>
+  <a class="canal" href="${linkInsta}" target="_blank" rel="noopener" style="--cor:var(--petroleo)"><span class="icone">${icones.instagram}</span><span><strong>Instagram</strong><span>@${esc(contato.instagramContato)}</span></span></a>
+  <a class="canal" href="${linkTiktok}" target="_blank" rel="noopener" style="--cor:#1d2b4a"><span class="icone">${icones.tiktok}</span><span><strong>TikTok</strong><span>${esc(contato.tiktok)}</span></span></a>`;
+$("#redes-rodape").innerHTML = `
+  <li><a href="${linkInsta}" target="_blank" rel="noopener">Instagram</a></li>
+  <li><a href="${linkTiktok}" target="_blank" rel="noopener">TikTok</a></li>
+  <li><a href="${linkWhats}" target="_blank" rel="noopener">WhatsApp</a></li>
+  <li><a href="${linkEmail}" target="_blank" rel="noopener">E-mail</a></li>`;
+$("#ano").textContent = new Date().getFullYear();
+
+/* contagem regressiva da Black Friday: dias em destaque, relógio correndo e frases que trocam a cada 4 segundos */
+(function () {
+  const dias = $("#bf-dias"), relogio = $("#bf-relogio"), contagem = $("#bf-contagem"), frase = $("#bf-frase");
+  const dois = (n) => String(n).padStart(2, "0");
+  function atualizar() {
+    const falta = blackFridayData - new Date();
+    if (falta <= 0) { contagem.innerHTML = "<strong>É hoje!</strong> A Black Friday chegou"; return; }
+    const d = Math.floor(falta / 864e5), h = Math.floor(falta / 36e5) % 24, m = Math.floor(falta / 6e4) % 60, s = Math.floor(falta / 1e3) % 60;
+    dias.textContent = dois(d);
+    contagem.firstChild.textContent = d === 1 ? "Falta " : "Faltam ";
+    dias.nextSibling.textContent = d === 1 ? " dia" : " dias";
+    relogio.textContent = `${dois(h)}:${dois(m)}:${dois(s)}`;
+  }
+  atualizar();
+  setInterval(atualizar, 1000);
+  let i = 0;
+  frase.textContent = frasesBlack[0];
+  if (reduzMovimento) return;
+  setInterval(() => {
+    frase.classList.add("trocando");
+    setTimeout(() => { i = (i + 1) % frasesBlack.length; frase.textContent = frasesBlack[i]; frase.classList.remove("trocando"); }, 400);
+  }, 4000);
+})();
+
+/* menu sanduíche */
+const botaoMenu = $(".sanduiche"), menu = $("#menu-principal");
+function fecharMenu() { menu.classList.remove("aberto"); botaoMenu.setAttribute("aria-expanded", "false"); botaoMenu.setAttribute("aria-label", "Abrir menu"); }
+botaoMenu.addEventListener("click", () => {
+  const abrir = !menu.classList.contains("aberto");
+  menu.classList.toggle("aberto", abrir);
+  botaoMenu.setAttribute("aria-expanded", String(abrir));
+  botaoMenu.setAttribute("aria-label", abrir ? "Fechar menu" : "Abrir menu");
+});
+menu.addEventListener("click", (e) => { if (e.target.closest("a")) fecharMenu(); });
+
+/* nichos na barra: cada item rola até a galeria e já deixa aquele nicho filtrado */
+/* posiciona PT/EN e "Crie comigo" exatamente embaixo de "Sobre mim" */
+function alinharAcoes() {
+  const acoes = $(".acoes-topo"), sobre = $('.topo .menu a[href="#sobre"]'), bf = $(".topo .menu a.link-bf"), crie = $(".trabalhe");
+  acoes.style.marginLeft = ""; crie.style.width = "";
+  if (innerWidth <= 1000 || !sobre || !bf) { acoes.style.marginLeft = "auto"; return; }
+  /* começa na mesma linha do texto de "Sobre mim" */
+  const inicio = sobre.getBoundingClientRect().left + parseFloat(getComputedStyle(sobre).paddingLeft);
+  acoes.style.marginLeft = Math.max(16, inicio - acoes.getBoundingClientRect().left) + "px";
+}
+addEventListener("resize", alinharAcoes);
+if (document.fonts) document.fonts.ready.then(alinharAcoes);
+setTimeout(alinharAcoes, 0);
+
+$("#lista-nichos").innerHTML = nichos.map(n => `<li><a href="#trabalhos" class="link-nicho" data-nicho="${n.id}" style="--cor:${n.cor}"><i aria-hidden="true"></i>${esc(n.nome)}</a></li>`).join("")
+  + `<li><a href="#fotos" class="link-nicho" style="--cor:var(--salmao)"><i aria-hidden="true"></i>Fotos UGC</a></li>`;
+$(".topo-explore").addEventListener("click", (e) => {
+  const link = e.target.closest("a[data-nicho]");
+  if (!link) return;
+  const filtro = document.querySelector(`.filtro[data-nicho="${link.dataset.nicho}"]`);
+  if (filtro) filtro.click();
+});
+
+/* contador animado */
+function animarContador(el) {
+  const alvo = parseFloat(el.dataset.alvo), casas = parseInt(el.dataset.casas || "0", 10);
+  if (reduzMovimento) { el.textContent = formatar(alvo, casas); return; }
+  const inicio = performance.now(), duracao = 1600;
+  (function passo(agora) {
+    const p = Math.min((agora - inicio) / duracao, 1);
+    el.textContent = formatar(alvo * (1 - Math.pow(1 - p, 3)), casas);
+    if (p < 1) requestAnimationFrame(passo);
+  })(inicio);
+}
+
+/* entrada suave ao rolar */
+const revelaveis = document.querySelectorAll(".revelar");
+const contadores = document.querySelectorAll(".contador[data-alvo]");
+if ("IntersectionObserver" in window && !reduzMovimento) {
+  contadores.forEach(c => c.textContent = formatar(0, parseInt(c.dataset.casas || "0", 10)));
+  const obs = new IntersectionObserver((entradas) => {
+    entradas.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add("visivel");
+      en.target.querySelectorAll(".contador[data-alvo]").forEach(animarContador);
+      obs.unobserve(en.target);
+    });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  revelaveis.forEach(el => obs.observe(el));
+} else {
+  revelaveis.forEach(el => el.classList.add("visivel"));
+}
+
+/* validação simples dos formulários */
+const emailValido = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+function validar(campos) {
+  let ok = true, primeiro = null;
+  campos.forEach(([id, regra, msg]) => {
+    const el = document.getElementById(id), erro = document.getElementById("erro-" + id);
+    const valido = regra(el.value.trim());
+    erro.textContent = valido ? "" : msg;
+    el.setAttribute("aria-invalid", String(!valido));
+    if (valido) el.removeAttribute("aria-describedby"); else el.setAttribute("aria-describedby", "erro-" + id);
+    if (!valido) { ok = false; primeiro = primeiro || el; }
+  });
+  if (primeiro) primeiro.focus();
+  return ok;
+}
+const preenchido = (v) => v.length > 1;
+
+/* ENVIO DO FORMULÁRIO de contato: hoje só mostra a confirmação.
+   Para receber por e-mail, use fetch("https://formspree.io/f/SEU_CODIGO", { method:"POST", body:new FormData(form) }) aqui. */
+$("#form-contato").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const ok = validar([
+    ["c-nome", preenchido, "Me conta seu nome, por favor."],
+    ["c-whats", (v) => v.replace(/\D/g, "").length >= 10, "Informe seu WhatsApp com DDD."],
+    ["c-email", emailValido, "Confere o e-mail? Parece que falta alguma coisa."],
+    ["c-marca", preenchido, "Qual é a sua marca?"],
+    ["c-orcamento", (v) => v.length > 0, "Informe um orçamento estimado."],
+    ["c-msg", (v) => v.length > 4, "Escreve um pouquinho sobre o que você precisa."]
+  ]);
+  /* aviso geral: sem os campos obrigatórios, a mensagem não é enviada */
+  $("#aviso-contato").hidden = ok;
+  if (!ok) return;
+  e.target.hidden = true;
+  const conf = $("#confirmacao-contato");
+  conf.hidden = false; conf.focus();
+});
+
+/* card de captura da tabela de investimentos */
+const fundo = $("#fundo-modal"), modal = fundo.querySelector(".modal");
+let focoAnterior = null;
+function abrirModal() {
+  focoAnterior = document.activeElement;
+  fundo.classList.add("aberto"); fundo.setAttribute("aria-hidden", "false");
+  setTimeout(() => $("#k-nome").focus(), 50);
+}
+function fecharModal() {
+  fundo.classList.remove("aberto"); fundo.setAttribute("aria-hidden", "true");
+  if (focoAnterior && focoAnterior.focus) focoAnterior.focus();
+}
+$("#fechar-modal").addEventListener("click", fecharModal);
+fundo.addEventListener("click", (e) => { if (e.target === fundo) fecharModal(); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") { if (fundo.classList.contains("aberto")) fecharModal(); else fecharMenu(); }
+  if (e.key === "Tab" && fundo.classList.contains("aberto")) {
+    const focaveis = [...modal.querySelectorAll("button, input, [tabindex='-1']")].filter(el => !el.closest("[hidden]"));
+    const primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+    else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+  }
+});
+$("#form-kit").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const ok = validar([
+    ["k-nome", preenchido, "Me conta seu nome, por favor."],
+    ["k-email", emailValido, "Confere o e-mail? Parece que falta alguma coisa."],
+    ["k-marca", preenchido, "Qual é a sua marca?"],
+    ["k-whats", (v) => v.replace(/\D/g, "").length >= 10, "Confere o WhatsApp com DDD?"]
+  ]);
+  if (!ok) return;
+  e.target.hidden = true;
+  const conf = $("#confirmacao-kit");
+  conf.hidden = false; conf.focus();
+});
+/* aparece uma vez por visita, depois de 7 segundos */
+let jaViu = false;
+try { jaViu = sessionStorage.getItem("midiaKitVisto") === "1"; } catch (err) {}
+if (!jaViu) {
+  setTimeout(() => {
+    abrirModal();
+    try { sessionStorage.setItem("midiaKitVisto", "1"); } catch (err) {}
+  }, 7000);
+}
+/* =====================================================================
+   TRADUÇÃO PARA INGLÊS (botões PT / EN no menu)
+   Cada linha é "texto em português": "texto em inglês".
+   Se mudar um texto do site, mude aqui também a chave (lado esquerdo), senão aquele trecho fica em português.
+   ===================================================================== */
+const traducoes = {
+  "Aline Abreu | Portfólio UGC Creator": "Aline Abreu | UGC Creator Portfolio",
+  "Portfólio UGC de Aline Abreu: conteúdos com olhar criativo e estratégico que mostram por que a sua marca é a escolha ideal.": "Aline Abreu's UGC portfolio: creative, strategic content that shows why your brand is the ideal choice.",
+  "Pular para o conteúdo": "Skip to content",
+  "Contagem regressiva para a Black Friday": "Black Friday countdown",
+  "Faltam": "Only",
+  "Falta": "Only",
+  "dias": "days left",
+  "dia": "day left",
+  "É hoje!": "It's today!",
+  "A Black Friday chegou": "Black Friday is here",
+  "Garantir minha vaga": "Book my spot",
+  "Vídeos que vendem todo dia": "Videos that sell every day",
+  "Poucas vagas para gravar em novembro": "Few spots left for November shoots",
+  "Entrega antes do pico das vendas": "Delivered before the sales peak",
+  "Pacotes para o funil completo": "Full-funnel packages",
+  "Criativos que prendem": "Creatives that hook",
+  "Reserve sua agenda de novembro": "Book your November slot",
+  "Roteiro aprovado antes de gravar": "Script approved before filming",
+  "Pronto para anúncio e TikTok Shop": "Ready for ads and TikTok Shop",
+  "Mais cliques com o mesmo orçamento": "More clicks, same budget",
+  "Do roteiro à venda em 7 dias úteis": "From script to sale in 7 business days",
+  "Menu principal": "Main menu",
+  "Sobre": "About",
+  "Destaques": "Highlights",
+  "Trabalhos": "Work",
+  "Alimentação saudável": "Healthy food",
+  "Experiências": "Experiences",
+  "Fotos": "Photos",
+  "Serviços": "Services",
+  "Contato": "Contact",
+  "Idioma do site": "Site language",
+  "Trabalhe comigo": "Work with me",
+  "Crie comigo": "Create with me",
+  "Resultados": "Results",
+  "Abrir menu": "Open menu",
+  "Fechar menu": "Close menu",
+  "ugc creator que entende de estratégia": "ugc creator who understands strategy",
+  "Aline Abreu / UGC Creator & Content Strategist | São Paulo, SP": "Aline Abreu / UGC Creator & Content Strategist | São Paulo, Brazil",
+  "ugc creator que faz minha marca vender": "ugc creator who makes my brand sell",
+  "Seu produto é a": "Your product is the",
+  "escolha ideal": "ideal choice",
+  "Meu conteúdo": "My content",
+  "mostra o porquê": "shows why",
+  "Crio conteúdos com": "I create content with a",
+  "olhar criativo e estratégico": "creative and strategic eye",
+  ", que": " that",
+  "geram identificação": "builds connection",
+  "e mostram o porquê sua marca é a escolha ideal.": "and shows why your brand is the ideal choice.",
+  "Ver conteúdos que convertem": "See content that converts",
+  "Quero esse resultado na minha marca": "I want these results for my brand",
+  "2 anos": "2 years",
+  "criando estratégias de conteúdo": "building content strategies",
+  "6 anos": "6 years",
+  "no mercado audiovisual": "in the audiovisual industry",
+  "+ de 281 mil": "281K+",
+  "views geradas no TikTok": "views generated on TikTok",
+  "Corredora": "Runner",
+  "apaixonada por corrida": "passionate about running",
+  "São Paulo, Brasil": "São Paulo, Brazil",
+  "Tipos de conteúdo que eu crio": "Types of content I create",
+  "Storytelling criativo que prende": "Storytelling that hooks",
+  "Ads que convertem": "Ads that convert",
+  "TikTok Shop que vende": "TikTok Shop that sells",
+  "Estratégia de conteúdo": "Content strategy",
+  "Fotos lifestyle que geram desejo": "Lifestyle photos that spark desire",
+  "UGC para e-commerce": "UGC for e-commerce",
+  "quem está por trás dos conteúdos que convertem": "who is behind the content that converts",
+  "Bastidores": "Behind the scenes",
+  "Oiie, eu sou a": "Hi, I'm",
+  "Aline!": "Aline!",
+  "Tenho 28 anos, sou de São Paulo, cineasta por formação e estrategista de conteúdo, com": "I'm 28, from São Paulo, a filmmaker by training and a content strategist, with",
+  "8 anos entre audiovisual e marketing": "8 years across audiovisual and marketing",
+  ". Junto esse": ". I combine this",
+  "com a minha": "with my",
+  "vivência de consumidora": "experience as a consumer",
+  "para criar conteúdos com storytelling que": "to create storytelling content that",
+  "gera identificação e converte": "builds connection and converts",
+  "Criei estratégias para redes sociais, calendários AON e campanhas, ações com influenciadores para marcas:": "I've built social media strategies, always-on and campaign calendars, and influencer activations for brands:",
+  "Em E-commerce Brasil, comparado ao trimestre anterior, gerei um resultado de:": "At E-commerce Brasil, compared to the previous quarter, I delivered:",
+  "Resultados para a E-commerce Brasil": "Results for E-commerce Brasil",
+  "visualizações": "views",
+  "seguidores": "followers",
+  "interações": "engagements",
+  "No audiovisual, trabalhei com edição de vídeo e direção criativa assistente em publicidade, documentários e redes sociais para marcas:": "In audiovisual, I worked in video editing and as an assistant creative director on ads, documentaries and social media for brands:",
+  "Fora do trabalho, amo": "Outside of work, I love",
+  "corrida, musculação, dança, pilates e yoga": "running, weight training, dance, pilates and yoga",
+  "(se deixar, faço todas!). Também cuido da alimentação no meu": "(I'd do them all if I could!). I also take care of my diet during my",
+  "processo de emagrecimento": "weight loss journey",
+  "e do cabelo, desde que comecei a": "and of my hair, ever since I started to",
+  "enfrentar a queda capilar": "deal with hair loss",
+  "Roteiro aprovado por você antes de eu gravar": "Script approved by you before I film",
+  "Uma rodada de ajuste inclusa em cada entrega": "One round of revisions included in every delivery",
+  "Entrega em até 7 dias úteis após o recebimento do produto": "Delivery within 7 business days after receiving the product",
+  "ugc creator com resultados reais": "ugc creator with real results",
+  "Por trás de cada view,": "Behind every view,",
+  "uma estratégia.": "a strategy.",
+  "Ganchos que despertam curiosidade, histórias que geram identificação e conteúdos que performam.": "Hooks that spark curiosity, stories that build connection and content that performs.",
+  "Conteúdos autorais do meu próprio perfil com resultados orgânicos": "Original content from my own profile with organic results",
+  "Vídeos de destaque": "Highlighted videos",
+  "Vídeo anterior": "Previous video",
+  "Próximo vídeo": "Next video",
+  "A estratégia": "The strategy",
+  "A ideia": "The idea",
+  "visualizações orgânicas": "organic views",
+  "interações orgânicas": "organic engagements",
+  "Áudio original": "Original audio",
+  "e": "&",
+  "4 sinais de que eu estava ficando calva": "4 signs I was going bald",
+  "Emagreci 13 kg e perdi metade do meu cabelo": "I lost 13 kg and half of my hair",
+  "Perdi metade do meu cabelo: meu tratamento para calvície feminina e eflúvio telógeno": "I lost half my hair: my treatment for female pattern hair loss and telogen effluvium",
+  "Minha primeira aula de yoga na Zaya": "My first yoga class at Zaya",
+  "Gancho visual e escrito impactante para despertar curiosidade logo nos primeiros segundos.": "A striking visual and written hook to spark curiosity in the first seconds.",
+  "Conteúdo de valor para reter a atenção de quem enfrenta o mesmo problema.": "Valuable content to hold the attention of people facing the same problem.",
+  "Identificação com uma dor específica, conectando meu relato à experiência da audiência.": "Connection through a specific pain point, linking my story to the audience's experience.",
+  "Gancho escrito altamente curioso, combinando emagrecimento e queda capilar para despertar interesse.": "A highly intriguing written hook, combining weight loss and hair loss to spark interest.",
+  "Storytelling pessoal para apresentar minha experiência de forma autêntica.": "Personal storytelling to present my experience authentically.",
+  "Identificação pelo relato, aproximando o conteúdo de pessoas que passaram por situações semelhantes.": "Connection through the story, bringing the content closer to people who went through similar situations.",
+  "Gancho visual e escrito impactante para despertar curiosidade e incentivar a audiência a continuar assistindo.": "A striking visual and written hook to spark curiosity and keep the audience watching.",
+  "Conteúdo informativo para compartilhar minha experiência e apresentar o tratamento.": "Informative content to share my experience and present the treatment.",
+  "Identificação com a audiência, criando conexão com pessoas que também buscam informações sobre queda capilar.": "Connection with the audience, reaching people who are also looking for information about hair loss.",
+  "Storytelling baseado em experiência pessoal para construir uma narrativa autêntica.": "Storytelling based on personal experience to build an authentic narrative.",
+  "Identificação com os interesses da audiência, aproximando o público da proposta da aula.": "Connection with the audience's interests, bringing people closer to what the class offers.",
+  "Apresentação do serviço como solução, integrando a marca à história em vez de apenas divulgar a experiência.": "Presenting the service as a solution, weaving the brand into the story instead of just promoting the experience.",
+  "Vídeo: 4 sinais de que eu estava ficando calva": "Video: 4 signs I was going bald",
+  "Vídeo: Emagreci 13 kg e perdi metade do meu cabelo": "Video: I lost 13 kg and half of my hair",
+  "Vídeo: Perdi metade do meu cabelo: meu tratamento para calvície feminina e eflúvio telógeno": "Video: I lost half my hair: my treatment for female pattern hair loss and telogen effluvium",
+  "Vídeo: Minha primeira aula de yoga na Zaya": "Video: My first yoga class at Zaya",
+  "1 de 4: 4 sinais de que eu estava ficando calva": "1 of 4: 4 signs I was going bald",
+  "2 de 4: Emagreci 13 kg e perdi metade do meu cabelo": "2 of 4: I lost 13 kg and half of my hair",
+  "3 de 4: Perdi metade do meu cabelo: meu tratamento para calvície feminina e eflúvio telógeno": "3 of 4: I lost half my hair: my treatment for female pattern hair loss and telogen effluvium",
+  "4 de 4: Minha primeira aula de yoga na Zaya": "4 of 4: My first yoga class at Zaya",
+  "Ver vídeo 1": "See video 1",
+  "Ver vídeo 2": "See video 2",
+  "Ver vídeo 3": "See video 3",
+  "Ver vídeo 4": "See video 4",
+  "conteúdo ugc para vender mais na black friday": "ugc content to sell more on black friday",
+  "Sua Black Friday,": "Your Black Friday,",
+  "do scroll ao carrinho.": "from scroll to cart.",
+  "Alguns exemplos do que a sua marca pode ter na Black Friday: a receita que desperta desejo, o review que tira a dúvida e o cupom que fecha a venda. E dá para criar muito mais, sob medida para o seu produto e cada etapa do funil.": "A few examples of what your brand can have for Black Friday: the recipe that sparks desire, the review that answers doubts and the coupon that closes the sale. And there is much more I can create, tailored to your product and each stage of the funnel.",
+  "Feche sua Black Friday com o funil completo.": "Close your Black Friday with the full funnel.",
+  "Um pacote com conteúdo para atrair, convencer e converter, roteirizado de uma vez e entregue antes do pico de vendas. Você para de improvisar e chega na data com tudo pronto para vender.": "One package with content to attract, convince and convert, scripted in one go and delivered before the sales peak. No more improvising: you reach the big day with everything ready to sell.",
+  "Consultar pacotes de funil completo →": "See full-funnel packages →",
+  "Funil completo para a sua Black Friday": "A full funnel for your Black Friday",
+  "Do roteiro à entrega, antes do pico de vendas.": "From script to delivery, before the sales peak.",
+  "Ver pacotes →": "See packages →",
+  "Sobre mim": "About me",
+  "Explore": "Explore",
+  "Fotos UGC": "UGC photos",
+  "UGC Creator & Content Strategist": "UGC Creator & Content Strategist",
+  "Topo de funil": "Top of funnel",
+  "Atenção e desejo": "Attention and desire",
+  "Meio de funil": "Middle of funnel",
+  "Consideração e confiança": "Consideration and trust",
+  "Fundo de funil": "Bottom of funnel",
+  "Conversão": "Conversion",
+  "Bolo de pote proteico com Whey da Bold": "Protein cake in a jar with Bold Whey",
+  "Atrair o público por meio de uma receita prática, gerar identificação e despertar o desejo pelo produto.": "Attract the audience with a practical recipe, build connection and spark desire for the product.",
+  "Gel de carboidrato Dobro": "Dobro carb gel",
+  "Educar sobre estratégia nutricional na corrida, gerar confiança por meio da experiência pessoal e estimular o interesse pelo produto.": "Educate about running nutrition strategy, build trust through personal experience and spark interest in the product.",
+  "Compras de treino e corrida no Mercado Livre": "Training and running gear shopping on Mercado Livre",
+  "Apresentar produtos recomendados, destacar seus benefícios e estimular a consideração de compra.": "Show recommended products, highlight their benefits and encourage purchase consideration.",
+  "99Food: promoções e cupons": "99Food: deals and coupons",
+  "Apresentar a plataforma como solução para economizar no pedido e incentivar o uso de cupons e promoções.": "Present the platform as a way to save on orders and encourage the use of coupons and deals.",
+  "Assistir: Bold, Bolo de pote proteico com Whey da Bold": "Watch: Bold, Protein cake in a jar with Bold Whey",
+  "Assistir: Dobro, Gel de carboidrato Dobro": "Watch: Dobro, Dobro carb gel",
+  "Assistir: Mercado Livre, Compras de treino e corrida no Mercado Livre": "Watch: Mercado Livre, Training and running gear shopping on Mercado Livre",
+  "Assistir: 99Food, 99Food: promoções e cupons": "Watch: 99Food, 99Food: deals and coupons",
+  "ugc creator que já criou para o meu nicho": "ugc creator who has created for my niche",
+  "Conteúdo que fala a língua": "Content that speaks the language",
+  "do seu nicho.": "of your niche.",
+  "Escolha o segmento da sua marca e veja como transformo produto em desejo, do primeiro segundo até o clique de compra.": "Pick your brand's segment and see how I turn products into desire, from the first second to the purchase click.",
+  "Filtrar trabalhos por nicho": "Filter work by niche",
+  "Todos": "All",
+  "Energia que dura o treino inteiro": "Energy that lasts the whole workout",
+  "A semana inteira resolvida com marmitas": "The whole week sorted with ready meals",
+  "Bolo de pote proteico pronto em minutos": "Protein cake in a jar, ready in minutes",
+  "As promoções que valem o clique": "The deals worth clicking",
+  "Minha primeira aula de yoga": "My first yoga class",
+  "Como economizar no delivery": "How to save on delivery",
+  "A creatina que entrou de vez na minha rotina": "The creatine that's now part of my routine",
+  "Frango desfiado que vira receita fit fácil": "Shredded chicken that becomes an easy healthy recipe",
+  "Proteína em forma de goma (sim, existe!)": "Protein in gummy form (yes, it exists!)",
+  "Brigadeiro proteico para matar a vontade": "Protein brigadeiro to beat the cravings",
+  "Vivi a experiência de perto": "I lived the experience up close",
+  "Cada quilômetro da Run Longer": "Every kilometer of Run Longer",
+  "A emoção de buscar o kit da Stronger": "The thrill of picking up the Stronger race kit",
+  "Assistir: Dobro, Energia que dura o treino inteiro": "Watch: Dobro, Energy that lasts the whole workout",
+  "Assistir: Liv Up, A semana inteira resolvida com marmitas": "Watch: Liv Up, The whole week sorted with ready meals",
+  "Assistir: Bold, Bolo de pote proteico pronto em minutos": "Watch: Bold, Protein cake in a jar, ready in minutes",
+  "Assistir: Mercado Livre, As promoções que valem o clique": "Watch: Mercado Livre, The deals worth clicking",
+  "Assistir: Zaya Wellness, Minha primeira aula de yoga": "Watch: Zaya Wellness, My first yoga class",
+  "Assistir: 99Food, Como economizar no delivery": "Watch: 99Food, How to save on delivery",
+  "Assistir: Growth, A creatina que entrou de vez na minha rotina": "Watch: Growth, The creatine that's now part of my routine",
+  "Assistir: Seara, Frango desfiado que vira receita fit fácil": "Watch: Seara, Shredded chicken that becomes an easy healthy recipe",
+  "Assistir: Ayna, Proteína em forma de goma (sim, existe!)": "Watch: Ayna, Protein in gummy form (yes, it exists!)",
+  "Assistir: YoPro, Brigadeiro proteico para matar a vontade": "Watch: YoPro, Protein brigadeiro to beat the cravings",
+  "Assistir: F Station, Vivi a experiência de perto": "Watch: F Station, I lived the experience up close",
+  "Assistir: Athenas, Cada quilômetro da Run Longer": "Watch: Athenas, Every kilometer of Run Longer",
+  "Assistir: Athenas, A emoção de buscar o kit da Stronger": "Watch: Athenas, The thrill of picking up the Stronger race kit",
+  "Sua marca": "Your brand",
+  "É a sua marca aqui": "Is your brand here",
+  "Vamos criar algo incrível juntos? ↗": "Shall we create something amazing together? ↗",
+  "Sua vez": "Your turn",
+  "Vamos criar algo incrível juntos?": "Shall we create something amazing together?",
+  "fotos ugc que deixam o produto irresistível": "ugc photos that make the product irresistible",
+  "Fotos que fazem": "Photos that make",
+  "o produto vender sozinho.": "the product sell itself.",
+  "Lifestyle, detalhe e produto em uso: imagens para site, anúncio, catálogo e redes sociais.": "Lifestyle, detail and product in use: images for websites, ads, catalogs and social media.",
+  "Fotos UGC, primeira faixa": "UGC photos, first row",
+  "Fotos UGC, segunda faixa": "UGC photos, second row",
+  "produto em mãos na cozinha": "product in hand in the kitchen",
+  "géis para o dia de prova": "gels for race day",
+  "pronta para os 14K": "ready for the 14K",
+  "aula de yoga": "yoga class",
+  "treino de braço na academia": "arm workout at the gym",
+  "detalhe da goma": "gummy close-up",
+  "dia de prova": "race day",
+  "look do dia": "outfit of the day",
+  "pace conferido antes da corrida": "checking my pace before the run",
+  "rotina de maquiagem": "makeup routine",
+  "proteína que cabe na mão": "protein that fits in your hand",
+  "medalha no Pacaembu": "medal at Pacaembu",
+  "Mulkshake no pós-prova": "Mulkshake after the race",
+  "receita na cozinha": "recipe in the kitchen",
+  "treino ao ar livre e café gelado": "outdoor workout and iced coffee",
+  "medalha dos 10K": "10K medal",
+  "evento de marketing": "marketing event",
+  "corrida na esteira": "treadmill run",
+  "bastidores da aula": "behind the scenes of the class",
+  "pós-treino na praia": "post-workout at the beach",
+  "o que uma ugc creator pode fazer pela minha marca": "what a ugc creator can do for my brand",
+  "Como eu": "How I",
+  "te ajudo": "help you",
+  "Do roteiro ao clique: os formatos que eu crio para a sua marca chamar atenção, gerar confiança e vender.": "From script to click: the formats I create so your brand grabs attention, builds trust and sells.",
+  "Criativo que prende": "Creative that hooks",
+  "Roteiro com gancho forte nos primeiros segundos e uma narrativa que gera identificação do começo ao fim.": "A script with a strong hook in the first seconds and a story that builds connection from start to finish.",
+  "Vídeos e variações de gancho prontos para tráfego pago, pensados para baixar custo e aumentar o clique.": "Videos and hook variations ready for paid traffic, designed to lower costs and increase clicks.",
+  "Conteúdo nativo para TikTok Shop, com o produto em uso e um caminho curto até a compra.": "Native content for TikTok Shop, with the product in use and a short path to purchase.",
+  "Unboxing, review e demonstração que respondem dúvidas e aumentam a confiança na página do produto.": "Unboxing, reviews and demos that answer questions and boost trust on the product page.",
+  "O produto no dia a dia, com luz natural, para site, catálogo, anúncios e redes sociais.": "The product in everyday life, in natural light, for websites, catalogs, ads and social media.",
+  "Pautas, calendário e formatos pensados para cada etapa do funil, do primeiro contato à venda.": "Topics, calendar and formats planned for each stage of the funnel, from first contact to sale.",
+  "Pacotes mensais": "Monthly packages",
+  "Conteúdo novo todo mês, com calendário combinado, valor fechado e prioridade na agenda para a sua marca nunca ficar sem criativo.": "New content every month, with an agreed calendar, a fixed price and priority booking so your brand never runs out of creatives.",
+  "Publipost": "Sponsored post",
+  "Conteúdo publicado no meu perfil @alinevabreuu, com legenda estratégica e marcação da marca, para alcançar uma audiência que confia na minha indicação.": "Content published on my profile @alinevabreuu, with a strategic caption and brand tag, to reach an audience that trusts my recommendations.",
+  "como contratar a aline abreu": "how to hire aline abreu",
+  "Qual história incrível": "What amazing story",
+  "vamos criar juntos?": "shall we create together?",
+  "Me conta onde a sua marca quer chegar e eu desenho o conteúdo que leva ela até lá, do gancho à venda. Respondo em até 48h.": "Tell me where your brand wants to go and I'll design the content that gets it there, from hook to sale. I reply within 48h.",
+  "Seu nome": "Your name",
+  "Seu WhatsApp": "Your WhatsApp",
+  "Seu e-mail": "Your email",
+  "Marca": "Brand",
+  "Orçamento estimado": "Estimated budget",
+  "Ex.: R$ 2.500": "E.g.: R$ 2,500",
+  "Mensagem": "Message",
+  "Produto, formato, prazo, objetivo de campanha": "Product, format, deadline, campaign goal",
+  "Não é possível enviar a mensagem: preencha os campos obrigatórios marcados acima.": "The message can't be sent: please fill in the required fields marked above.",
+  "Enviar mensagem": "Send message",
+  "Mensagem recebida!": "Message received!",
+  "Obrigada pelo contato. Já já eu te respondo no e-mail que você deixou.": "Thanks for reaching out. I'll reply to the email you left very soon.",
+  "Me conta seu nome, por favor.": "Please tell me your name.",
+  "Informe seu WhatsApp com DDD.": "Please enter your WhatsApp with area code.",
+  "Confere o e-mail? Parece que falta alguma coisa.": "Please check your email, something seems to be missing.",
+  "Qual é a sua marca?": "What is your brand?",
+  "Informe um orçamento estimado.": "Please enter an estimated budget.",
+  "Escreve um pouquinho sobre o que você precisa.": "Please write a little about what you need.",
+  "Confere o WhatsApp com DDD?": "Please check your WhatsApp with area code.",
+  "dúvidas antes de contratar uma ugc creator": "questions before hiring a ugc creator",
+  "Perguntas": "Frequently asked",
+  "frequentes": "questions",
+  "O que as marcas mais perguntam antes de fechar um conteúdo comigo.": "What brands ask most before booking content with me.",
+  "Como posso usar o conteúdo?": "How can I use the content?",
+  "Nas redes sociais, tráfego pago (ads), catálogos, sites, e-commerces e marketplaces.": "On social media, paid traffic (ads), catalogs, websites, e-commerce stores and marketplaces.",
+  "Tempo de entrega?": "Delivery time?",
+  "Prazo padrão de entrega de até 7 dias úteis após o recebimento do produto.": "Standard delivery within 7 business days after receiving the product.",
+  "Tem exclusividade?": "Is there exclusivity?",
+  "A exclusividade pode ser negociada mediante ajuste contratual.": "Exclusivity can be negotiated through a contract adjustment.",
+  "Por quanto tempo posso usar o conteúdo?": "How long can I use the content?",
+  "Uso orgânico vitalício para redes sociais e marketplaces. Para uso em tráfego pago, o prazo é de 3 meses.": "Lifetime organic use on social media and marketplaces. For paid traffic, usage is 3 months.",
+  "| UGC Creator & Content Strategist": "| UGC Creator & Content Strategist",
+  "tabela-de-investimentos": "rate-card",
+  "Quer receber minha tabela de investimentos + opções de pacotes UGC?": "Want my rate card + UGC package options?",
+  "Preenche aqui que eu te mando os valores, os formatos e os pacotes pensados para a sua marca.": "Fill this in and I'll send you the prices, formats and packages designed for your brand.",
+  "Nome": "Name",
+  "E-mail": "Email",
+  "Nome da marca": "Brand name",
+  "Quero receber a tabela": "Send me the rate card",
+  "Prontinho!": "All set!",
+  "Sua tabela de investimentos e as opções de pacotes vão chegar no seu e-mail em breve.": "Your rate card and package options will arrive in your inbox soon.",
+  "Fechar": "Close",
+  "Aline Abreu sorrindo, de blusa vermelha, apoiada em uma mesa de mármore": "Aline Abreu smiling in a red top, leaning on a marble table",
+  "Aline Abreu sorrindo, de top estampado e calça vermelha, em frente a um prédio com palmeiras": "Aline Abreu smiling in a printed top and red trousers, in front of a building with palm trees"
+};
+
+/* motor da tradução: troca os textos da página pelos do dicionário e guarda o original para voltar ao português */
+(function () {
+  const ATRIBUTOS = ["placeholder", "aria-label", "alt", "title"];
+  const originais = new WeakMap();
+  let idioma = "pt";
+  const chave = (s) => s.replace(/\s+/g, " ").trim();
+  function traduzirTexto(no) {
+    if (!originais.has(no)) originais.set(no, no.nodeValue);
+    const orig = originais.get(no), k = chave(orig);
+    if (idioma === "en" && traducoes[k] !== undefined) {
+      const ini = orig.match(/^\s*/)[0], fim = orig.match(/\s*$/)[0];
+      const novo = ini + traducoes[k] + fim;
+      if (no.nodeValue !== novo) no.nodeValue = novo;
+    } else if (no.nodeValue !== orig) no.nodeValue = orig;
+  }
+  function traduzirElemento(el) {
+    ATRIBUTOS.forEach(a => {
+      if (!el.hasAttribute(a)) return;
+      const guarda = "data-pt-" + a;
+      if (!el.hasAttribute(guarda)) el.setAttribute(guarda, el.getAttribute(a));
+      const orig = el.getAttribute(guarda), k = chave(orig);
+      const novo = idioma === "en" && traducoes[k] !== undefined ? traducoes[k] : orig;
+      if (el.getAttribute(a) !== novo) el.setAttribute(a, novo);
+    });
+  }
+  function percorrer(raiz) {
+    if (raiz.nodeType === 3) { traduzirTexto(raiz); return; }
+    if (raiz.nodeType !== 1 || /^(SCRIPT|STYLE)$/.test(raiz.tagName)) return;
+    traduzirElemento(raiz);
+    raiz.querySelectorAll("*").forEach(traduzirElemento);
+    const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: n => /^(SCRIPT|STYLE)$/.test(n.parentElement && n.parentElement.tagName) ? 2 : 1 });
+    while (w.nextNode()) traduzirTexto(w.currentNode);
+  }
+  /* textos que o site troca sozinho (frases da barra, contagem, vídeo do carrossel, avisos) também são traduzidos */
+  const observador = new MutationObserver((mudancas) => {
+    if (idioma !== "en") { mudancas.forEach(m => { if (m.type === "characterData") originais.delete(m.target); }); return; }
+    mudancas.forEach(m => {
+      if (m.type === "characterData") { originais.delete(m.target); traduzirTexto(m.target); }
+      m.addedNodes.forEach(n => { if (n.nodeType === 3) originais.delete(n); percorrer(n); });
+    });
+    observador.takeRecords(); /* descarta as mudanças feitas pela própria tradução, para não entrar em loop */
+  });
+  observador.observe(document.body, { childList: true, subtree: true, characterData: true });
+  const tituloPt = document.title, descricao = document.querySelector('meta[name="description"]'), descricaoPt = descricao.content;
+  function mudarIdioma(novo) {
+    idioma = novo;
+    percorrer(document.body);
+    observador.takeRecords();
+    document.documentElement.lang = novo === "en" ? "en" : "pt-BR";
+    document.title = novo === "en" ? traducoes[tituloPt] : tituloPt;
+    descricao.content = novo === "en" ? traducoes[descricaoPt] : descricaoPt;
+    document.querySelectorAll(".idioma button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.idioma === novo)));
+    try { localStorage.setItem("idioma", novo); } catch (err) {}
+    if (typeof alinharAcoes === "function") alinharAcoes(); /* os links mudam de largura com o idioma */
+  }
+  document.querySelectorAll(".idioma button").forEach(b => b.addEventListener("click", () => mudarIdioma(b.dataset.idioma)));
+  let salvo = "pt";
+  try { salvo = localStorage.getItem("idioma") || "pt"; } catch (err) {}
+  if (salvo === "en") mudarIdioma("en");
+})();
+
+</script>
+</body>
+</html>
