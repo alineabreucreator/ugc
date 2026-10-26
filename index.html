@@ -1817,11 +1817,12 @@ $("#ano").textContent = new Date().getFullYear();
 /* título da capa em bloco (só no computador): cada linha ganha o tamanho de letra
    que faz todas terminarem no mesmo ponto, alinhadas dos dois lados */
 (function () {
-  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")];
+  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")], fraseCapa = $(".capa .frase");
   let pendente = false;
   function ajustarTitulo() {
     pendente = false;
     linhas.forEach(l => l.style.fontSize = "");
+    fraseCapa.style.maxWidth = ""; fraseCapa.style.textAlign = "";
     if (innerWidth <= 600) return;
     const base = parseFloat(getComputedStyle(titulo).fontSize);
     const largura = (l) => l.getBoundingClientRect().width;
@@ -1834,6 +1835,9 @@ $("#ano").textContent = new Date().getFullYear();
         l.style.fontSize = (atual * alvo / largura(l)).toFixed(2) + "px";
       });
     }
+    /* o texto "Crio conteúdos..." fica com a mesma largura do título, justificado */
+    fraseCapa.style.maxWidth = largura(linhas[0]).toFixed(1) + "px";
+    fraseCapa.style.textAlign = "justify";
   }
   const agendar = () => { if (!pendente) { pendente = true; requestAnimationFrame(ajustarTitulo); } };
   addEventListener("resize", agendar);
