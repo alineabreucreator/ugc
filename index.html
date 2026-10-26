@@ -678,7 +678,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
   .barra.safari{padding:7px 10px;gap:8px}
   .barra.safari .semaforo{gap:5px}
   .barra.safari .semaforo i{width:9px;height:9px}
-  .safari .busca{padding:5px 22px 5px 8px;gap:5px;font-size:.68rem;letter-spacing:-.01em}
+  .safari .busca{padding:5px 22px 5px 8px;gap:5px;font-size:.64rem;letter-spacing:-.01em}
   .safari .busca svg{flex-basis:11px;width:11px;height:11px}
   .safari .busca .recarregar{right:7px;width:11px;height:11px}
   .safari .busca span{overflow:visible;text-overflow:clip}
@@ -723,6 +723,81 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
   #trabalhos .filtro[data-nicho="todos"]{grid-column:1 / -1}
 }
 
+.so-celular{display:none}
+@media (max-width:600px){
+  /* nichos saem do topo e vão para o menu, dentro de Trabalhos */
+  .topo-explore{height:0;border:0}
+  #lista-nichos{display:none}
+  .topo .menu .so-celular{display:block}
+  .topo .menu .submenu{list-style:none;margin:0 0 6px 14px;padding:0 0 0 12px;border-left:2px solid rgba(255,255,255,.15);display:grid}
+  .topo .menu .submenu a{display:flex;align-items:center;gap:8px;padding:8px 10px;font-size:.92rem;opacity:.9}
+  .topo .menu .submenu i{flex:0 0 7px;height:7px;border-radius:50%;background:var(--cor)}
+  .topo .menu a{padding:10px 14px;font-size:1rem}
+  .topo .menu{max-height:calc(100svh - 96px);overflow-y:auto}
+  /* sem a linha dos nichos, o topo fica com 96px (barra da Black Friday + menu) */
+  html{scroll-padding-top:96px}
+  main{padding-top:96px}
+  .capa{min-height:calc(100svh - 96px)}
+
+  /* tamanhos pensados para o celular */
+  body{font-size:15px}
+  .conteudo{padding:34px 16px}
+  .capa .conteudo{padding-top:22px;padding-bottom:30px}
+  .rotulo-topo{font-size:.62rem}
+  .capa h1{font-size:1.65rem;margin-bottom:16px}
+  .capa .frase{font-size:.92rem;line-height:1.55}
+  :is(#sobre,#destaques,#black-friday,#trabalhos,#fotos,#servicos,#contato,#faq) .titulo-secao{font-size:1.4rem;line-height:1.08;margin-bottom:10px}
+  :is(#destaques,#black-friday,#trabalhos,#fotos,#servicos,#contato,#faq) .intro{font-size:.85rem;line-height:1.5;margin-bottom:18px}
+  #sobre p{font-size:.85rem;line-height:1.55}
+  #sobre p.grupo-titulo{font-size:.82rem}
+  .tags{gap:6px;margin-bottom:16px}
+  .tags li{font-size:.7rem;padding:2px 8px}
+  .foto-sobre{max-width:200px}
+  .botao{padding:14px 18px;font-size:.88rem}
+  .capa .botao-primario{padding:14px 18px;font-size:.88rem}
+  .capa .botao-link{font-size:.85rem}
+  .faixa-trilho span.marca{font-size:.7rem;padding:6px 12px}
+  .faixa-trilho span.marca::after{margin-left:14px}
+  /* resultados: vídeo do carrossel menor */
+  .slide{flex-basis:190px}
+  .trilho{padding:10px calc(50% - 95px)}
+  /* black friday: vídeos do funil com no máximo 170px de largura */
+  .etapa-cards{grid-template-columns:repeat(var(--n),minmax(0,170px));justify-content:center;gap:10px}
+  .etapa-cab{padding:8px 16px 8px 10px}
+  .chamada-bf{padding:12px 12px 12px 14px}
+  .chamada-bf strong{font-size:.85rem}
+  .chamada-bf-texto span{font-size:.72rem}
+  .chamada-bf em{font-size:.7rem;padding:8px 11px}
+  /* galeria: legendas menores */
+  .trabalhos-grade{gap:10px}
+  .trabalho .post-legenda{font-size:.72rem}
+  .trabalho .post-quem{font-size:.68rem}
+  /* fotos */
+  .post-foto,#fotos .post-foto{flex-basis:108px}
+  /* serviços */
+  .servico{padding:16px}
+  .servico .num{font-size:.78rem}
+  .servico h3{font-size:.9rem;margin:6px 0 6px}
+  .servico p{font-size:.8rem}
+  .servicos-grade{gap:10px}
+  /* contato e faq (campos continuam com 16px para o iPhone não dar zoom) */
+  .campo label{font-size:.8rem}
+  .canal{padding:10px 12px}
+  .faq summary{font-size:.85rem;padding:11px 14px}
+  .faq details p{font-size:.82rem;padding:10px 14px 12px}
+  .campo input,.campo textarea,.campo select,#contato .campo input,#contato .campo textarea{font-size:16px;padding:8px 12px}
+  .formulario{gap:10px}
+  .campo textarea{min-height:90px}
+  /* serviços em duas colunas, mais compactos */
+  .servicos-grade{grid-template-columns:1fr 1fr}
+  .servico{padding:12px}
+  .servico h3{font-size:.76rem;line-height:1.25}
+  .servico p{font-size:.72rem;line-height:1.45}
+  /* promessas do sobre mim */
+  #sobre .promessas li{font-size:.8rem;padding:6px 0 6px 34px}
+  #sobre .promessas li::before{width:24px;height:24px;top:4px;font-size:.75rem}
+}
+
 /* respeita quem prefere menos movimento */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -753,6 +828,8 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
         <li><a href="#sobre">Sobre mim</a></li>
         <li><a href="#destaques">Resultados</a></li>
         <li><a href="#black-friday" class="link-bf">Black Friday</a></li>
+        <!-- só no celular: Trabalhos com os nichos embaixo (vêm do array nichos no script) -->
+        <li class="so-celular"><a href="#trabalhos">Trabalhos</a><ul class="submenu" id="menu-nichos"></ul></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
@@ -872,7 +949,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
           </ul>
 
           <p class="grupo-titulo">No audiovisual, trabalhei com edição de vídeo e direção criativa assistente em publicidade, documentários e redes sociais para marcas:</p>
-          <ul class="tags"><li>O Boticário</li><li>Mercado Livre</li><li>Grupo Abril</li><li>Gringo</li><li>Natura</li><li>Mercado Pago</li><li>Brasil Paralelo</li></ul>
+          <ul class="tags"><li>O Boticário</li><li>Mercado Livre</li><li>Grupo Abril</li><li>Gringo</li><li>Natura</li><li>Mercado Pago</li></ul>
 
           <p>Fora do trabalho, amo <strong class="destaque">corrida, musculação, dança, pilates e yoga</strong> (se deixar, faço todas!). Também cuido da alimentação no meu <strong class="destaque">processo de emagrecimento</strong> e do cabelo, desde que comecei a <strong class="destaque">enfrentar a queda capilar</strong>.</p>
           <ul class="promessas">
@@ -1755,6 +1832,13 @@ setTimeout(alinharAcoes, 0);
 
 $("#lista-nichos").innerHTML = nichos.map(n => `<li><a href="#trabalhos" class="link-nicho" data-nicho="${n.id}" style="--cor:${n.cor}"><i aria-hidden="true"></i>${esc(n.nome)}</a></li>`).join("")
   + `<li><a href="#fotos" class="link-nicho" style="--cor:var(--salmao)"><i aria-hidden="true"></i>Fotos UGC</a></li>`;
+$("#menu-nichos").innerHTML = $("#lista-nichos").innerHTML;
+$("#menu-nichos").addEventListener("click", (e) => {
+  const link = e.target.closest("a[data-nicho]");
+  if (!link) return;
+  const filtro = document.querySelector(`.filtro[data-nicho="${link.dataset.nicho}"]`);
+  if (filtro) filtro.click();
+});
 $(".topo-explore").addEventListener("click", (e) => {
   const link = e.target.closest("a[data-nicho]");
   if (!link) return;
