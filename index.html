@@ -732,7 +732,8 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 }
 
 .so-celular{display:none}
-/* quebras de linha do título da capa: quatro linhas no computador e no celular */
+/* título da capa: uma linha por span; no computador o script ajusta o tamanho de cada linha para formar um bloco alinhado dos dois lados */
+.capa h1 .lt{display:block;width:max-content;max-width:100%}
 @media (max-width:600px){
   /* nichos saem do topo e vão para o menu, dentro de Trabalhos */
   .topo-explore{height:0;border:0}
@@ -878,7 +879,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
             <span><span id="digitando">ugc creator que faz minha marca vender</span><span class="cursor"></span></span>
           </div>
-          <h1 id="titulo-capa">Seu produto é a <br class="quebra-titulo"><em>escolha ideal</em>. <span class="linha2">Meu conteúdo <br class="quebra-titulo"><em>mostra o porquê</em>.</span></h1>
+          <h1 id="titulo-capa"><span class="lt">Seu produto é a</span> <span class="lt"><em>escolha ideal</em>.</span> <span class="lt">Meu conteúdo</span> <span class="lt"><em>mostra o porquê</em>.</span></h1>
           <p class="frase">Crio conteúdos com <strong>olhar criativo e estratégico</strong>, que <strong>geram identificação</strong> e mostram o porquê sua marca é a escolha ideal.</p>
           <div class="botoes">
             <a href="#destaques" class="botao botao-primario">Ver conteúdos que convertem <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
@@ -1811,6 +1812,35 @@ $("#ano").textContent = new Date().getFullYear();
     frase.classList.add("trocando");
     setTimeout(() => { i = (i + 1) % frasesBlack.length; frase.textContent = frasesBlack[i]; frase.classList.remove("trocando"); }, 400);
   }, 4000);
+})();
+
+/* título da capa em bloco (só no computador): cada linha ganha o tamanho de letra
+   que faz todas terminarem no mesmo ponto, alinhadas dos dois lados */
+(function () {
+  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")];
+  let pendente = false;
+  function ajustarTitulo() {
+    pendente = false;
+    linhas.forEach(l => l.style.fontSize = "");
+    if (innerWidth <= 600) return;
+    const base = parseFloat(getComputedStyle(titulo).fontSize);
+    const largura = (l) => l.getBoundingClientRect().width;
+    const medidas = linhas.map(largura);
+    /* alvo: a média das linhas, sem passar da coluna do texto */
+    const alvo = Math.min(medidas.reduce((a, b) => a + b, 0) / medidas.length, titulo.clientWidth);
+    for (let volta = 0; volta < 3; volta++) {
+      linhas.forEach(l => {
+        const atual = parseFloat(getComputedStyle(l).fontSize) || base;
+        l.style.fontSize = (atual * alvo / largura(l)).toFixed(2) + "px";
+      });
+    }
+  }
+  const agendar = () => { if (!pendente) { pendente = true; requestAnimationFrame(ajustarTitulo); } };
+  addEventListener("resize", agendar);
+  if (document.fonts) document.fonts.ready.then(agendar);
+  /* refaz quando o idioma troca o texto */
+  new MutationObserver(agendar).observe(titulo, { childList: true, subtree: true, characterData: true });
+  agendar();
 })();
 
 /* menu sanduíche */
