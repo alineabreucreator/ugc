@@ -581,7 +581,6 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 @keyframes pulso-bf{50%{box-shadow:0 0 0 6px rgba(40,59,99,.18)}}
 .bf-contagem{flex:0 0 auto;font-family:var(--fonte-titulo);font-weight:700;font-size:.9rem;white-space:nowrap}
 .bf-contagem strong{display:inline-block;min-width:1.6em;padding:1px 7px;margin:0 2px;border-radius:6px;background:none;color:var(--tinta);padding:0;min-width:0;font-weight:900;text-align:center}
-.bf-relogio{margin-left:6px;font-variant-numeric:tabular-nums;font-weight:700;font-size:.8rem;opacity:.7}
 .bf-frase{min-width:0;font-size:.88rem;font-weight:600;color:var(--tinta);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .4s ease,transform .4s ease}
 .bf-frase.trocando{opacity:0;transform:translateY(6px)}
 .bf-cta{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:none;color:var(--tinta);text-decoration:underline;text-underline-offset:3px;text-decoration:none;font-family:var(--fonte-titulo);font-weight:800;font-size:.78rem;white-space:nowrap;transition:transform .2s}
@@ -593,12 +592,11 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 @keyframes piscar-cta{50%{background:var(--laranja-botao);box-shadow:0 0 0 4px rgba(255,255,255,.55)}}
 @media (max-width:1180px){.bf-frase{display:none}}
 /* no celular a barra amarela ganha duas linhas para mostrar tudo:
-   linha 1: selo BLACK FRIDAY e a frase que troca; linha 2: dias e relógio embaixo do selo, e o botão */
+   linha 1: selo BLACK FRIDAY e a frase que troca; linha 2: dias embaixo do selo, e o botão */
 @media (max-width:600px){
   .barra-bf{height:66px;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"selo frase" "contagem cta";align-items:center;column-gap:10px;row-gap:5px;padding:6px 12px}
   .barra-bf .bf-selo{grid-area:selo;justify-self:start;padding:3px 8px;font-size:.62rem;letter-spacing:.16em;border-radius:6px}
   .bf-contagem{grid-area:contagem;justify-self:start;font-size:.8rem}
-  .bf-relogio{font-size:.74rem}
   .bf-frase{grid-area:frase;justify-self:end;display:block;font-size:.7rem;line-height:1.15;letter-spacing:-.01em;text-align:right;white-space:normal;overflow:visible} /* frase mais longa quebra em duas linhas em vez de cortar */
   .barra-bf .bf-cta{grid-area:cta;justify-self:end;padding:4px 8px;font-size:.64rem;gap:4px}
   .topo{top:66px}
@@ -825,7 +823,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 <!-- ===================== CONTAGEM PARA A BLACK FRIDAY (data e frases no script, em blackFridayData e frasesBlack) ===================== -->
 <div class="barra-bf" role="region" aria-label="Contagem regressiva para a Black Friday">
   <span class="bf-selo">Black Friday</span>
-  <span class="bf-contagem" id="bf-contagem">Faltam <strong id="bf-dias">00</strong> dias<span class="bf-relogio" id="bf-relogio" aria-hidden="true"></span></span>
+  <span class="bf-contagem" id="bf-contagem">Faltam <strong id="bf-dias">00</strong> dias</span>
   <span class="bf-frase" id="bf-frase" aria-live="off"></span>
   <a class="bf-cta" href="#contato">Garantir minha vaga <span aria-hidden="true">→</span></a>
 </div>
@@ -1793,21 +1791,20 @@ $("#redes-rodape").innerHTML = `
   <li><a href="${linkEmail}" target="_blank" rel="noopener">E-mail</a></li>`;
 $("#ano").textContent = new Date().getFullYear();
 
-/* contagem regressiva da Black Friday: dias em destaque, relógio correndo e frases que trocam a cada 4 segundos */
+/* contagem regressiva da Black Friday: dias em destaque e frases que trocam a cada 4 segundos */
 (function () {
-  const dias = $("#bf-dias"), relogio = $("#bf-relogio"), contagem = $("#bf-contagem"), frase = $("#bf-frase");
+  const dias = $("#bf-dias"), contagem = $("#bf-contagem"), frase = $("#bf-frase");
   const dois = (n) => String(n).padStart(2, "0");
   function atualizar() {
     const falta = blackFridayData - new Date();
     if (falta <= 0) { contagem.innerHTML = "<strong>É hoje!</strong> A Black Friday chegou"; return; }
-    const d = Math.floor(falta / 864e5), h = Math.floor(falta / 36e5) % 24, m = Math.floor(falta / 6e4) % 60, s = Math.floor(falta / 1e3) % 60;
+    const d = Math.floor(falta / 864e5);
     dias.textContent = dois(d);
     contagem.firstChild.textContent = d === 1 ? "Falta " : "Faltam ";
     dias.nextSibling.textContent = d === 1 ? " dia" : " dias";
-    relogio.textContent = `${dois(h)}:${dois(m)}:${dois(s)}`;
   }
   atualizar();
-  setInterval(atualizar, 1000);
+  setInterval(atualizar, 60000);
   let i = 0;
   frase.textContent = frasesBlack[0];
   if (reduzMovimento) return;
