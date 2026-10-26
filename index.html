@@ -593,13 +593,13 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 @keyframes piscar-cta{50%{background:var(--laranja-botao);box-shadow:0 0 0 4px rgba(255,255,255,.55)}}
 @media (max-width:1180px){.bf-frase{display:none}}
 /* no celular a barra amarela ganha duas linhas para mostrar tudo:
-   linha 1: selo BLACK FRIDAY, dias e relógio; linha 2: frase que troca e o botão */
+   linha 1: selo BLACK FRIDAY e a frase que troca; linha 2: dias e relógio embaixo do selo, e o botão */
 @media (max-width:600px){
-  .barra-bf{height:66px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"selo contagem" "frase cta";align-items:center;column-gap:8px;row-gap:5px;padding:6px 12px}
+  .barra-bf{height:66px;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"selo frase" "contagem cta";align-items:center;column-gap:10px;row-gap:5px;padding:6px 12px}
   .barra-bf .bf-selo{grid-area:selo;justify-self:start;padding:3px 8px;font-size:.62rem;letter-spacing:.16em;border-radius:6px}
-  .bf-contagem{grid-area:contagem;justify-self:end;font-size:.8rem}
+  .bf-contagem{grid-area:contagem;justify-self:start;font-size:.8rem}
   .bf-relogio{font-size:.74rem}
-  .bf-frase{grid-area:frase;display:block;font-size:.7rem;line-height:1.15;letter-spacing:-.01em;white-space:normal;overflow:visible} /* frase mais longa quebra em duas linhas em vez de cortar */
+  .bf-frase{grid-area:frase;justify-self:end;display:block;font-size:.7rem;line-height:1.15;letter-spacing:-.01em;text-align:right;white-space:normal;overflow:visible} /* frase mais longa quebra em duas linhas em vez de cortar */
   .barra-bf .bf-cta{grid-area:cta;justify-self:end;padding:4px 8px;font-size:.64rem;gap:4px}
   .topo{top:66px}
 }
