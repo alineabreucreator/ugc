@@ -1817,12 +1817,13 @@ $("#ano").textContent = new Date().getFullYear();
 /* título da capa em bloco (só no computador): cada linha ganha o tamanho de letra
    que faz todas terminarem no mesmo ponto, alinhadas dos dois lados */
 (function () {
-  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")], fraseCapa = $(".capa .frase");
+  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")], fraseCapa = $(".capa .frase"), rotuloCapa = $(".capa .rotulo-topo");
   let pendente = false;
   function ajustarTitulo() {
     pendente = false;
     linhas.forEach(l => l.style.fontSize = "");
     fraseCapa.style.maxWidth = ""; fraseCapa.style.textAlign = "";
+    ["fontSize", "width", "letterSpacing", "marginRight", "textAlign", "textAlignLast"].forEach(p => rotuloCapa.style[p] = "");
     if (innerWidth <= 600) return;
     const base = parseFloat(getComputedStyle(titulo).fontSize);
     const largura = (l) => l.getBoundingClientRect().width;
@@ -1838,6 +1839,27 @@ $("#ano").textContent = new Date().getFullYear();
     /* o texto "Crio conteúdos..." fica com a mesma largura do título, justificado */
     fraseCapa.style.maxWidth = largura(linhas[0]).toFixed(1) + "px";
     fraseCapa.style.textAlign = "justify";
+    /* a linha "Aline Abreu / UGC Creator..." também vai de ponta a ponta do título:
+       a letra fica legível (no mínimo 10px) e o espaço entre as letras é que se ajusta */
+    rotuloCapa.style.width = "max-content";
+    const alvoRotulo = largura(linhas[0]), letras = rotuloCapa.textContent.trim().length;
+    let tamanhoRotulo = parseFloat(getComputedStyle(rotuloCapa).fontSize);
+    rotuloCapa.style.letterSpacing = "0px";
+    const semEspaco = largura(rotuloCapa);
+    if (semEspaco > alvoRotulo) {
+      tamanhoRotulo = Math.max(10, tamanhoRotulo * alvoRotulo / semEspaco);
+      rotuloCapa.style.fontSize = tamanhoRotulo.toFixed(2) + "px";
+    }
+    if (largura(rotuloCapa) > alvoRotulo + 1) {
+      /* tela menor: não cabe numa linha legível, então quebra em duas, justificadas na largura do título */
+      rotuloCapa.style.fontSize = "10px"; rotuloCapa.style.letterSpacing = ".08em";
+      rotuloCapa.style.width = alvoRotulo.toFixed(1) + "px";
+      rotuloCapa.style.textAlign = "justify";
+      return;
+    }
+    const espaco = Math.max(0, (alvoRotulo - largura(rotuloCapa)) / (letras - 1));
+    rotuloCapa.style.letterSpacing = espaco.toFixed(2) + "px";
+    rotuloCapa.style.marginRight = "-" + espaco.toFixed(2) + "px";
   }
   const agendar = () => { if (!pendente) { pendente = true; requestAnimationFrame(ajustarTitulo); } };
   addEventListener("resize", agendar);
