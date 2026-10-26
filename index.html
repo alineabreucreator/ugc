@@ -649,6 +649,80 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
   .trabalhos-grade{grid-template-columns:1fr}
 }
 
+/* ===================== CELULAR COMO APLICATIVO =====================
+   Tudo aqui só vale em telas de até 600px: a versão do computador não muda. */
+.abas-app{display:none}
+@media (max-width:600px){
+  /* linha Explore: nichos em pílulas que deslizam para o lado, todos inteiros */
+  .topo-explore{padding:0 0 0 12px;gap:0}
+  .topo-explore ul{gap:6px;padding-right:16px;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  .topo-explore a{padding:3px 10px;border-radius:999px;background:rgba(255,255,255,.1);font-size:.74rem}
+  /* PT/EN sobe para a linha do nome, ao lado do menu */
+  .acoes-topo{position:absolute;top:27px;right:52px;margin:0!important;transform:translateY(-50%)}
+  .acoes-topo .trabalhe{display:none} /* o "Crie comigo" vira a aba do meio, embaixo */
+
+  /* barra de abas fixa embaixo, como num aplicativo */
+  .abas-app{display:grid;grid-template-columns:repeat(5,1fr);align-items:end;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:var(--petroleo);border-top:1px solid rgba(255,255,255,.12);box-shadow:0 -10px 24px -16px rgba(40,59,99,.6)}
+  .abas-app a{display:grid;justify-items:center;gap:2px;padding:4px 0;white-space:nowrap;color:rgba(249,223,204,.7);text-decoration:none;font-size:.62rem;font-weight:700;letter-spacing:.02em}
+  .abas-app svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .abas-app a[aria-current="true"]{color:#fff}
+  .abas-app a[aria-current="true"] svg{stroke:var(--amarelo)}
+  .abas-app .aba-destaque span.bola{display:grid;place-items:center;width:46px;height:46px;margin-top:-22px;border-radius:50%;background:var(--laranja-botao);border:3px solid var(--petroleo);box-shadow:0 6px 14px -6px rgba(0,0,0,.5)}
+  .abas-app .aba-destaque svg{stroke:#fff}
+  .abas-app .aba-destaque{color:#fff}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .rodape .marca-nome{white-space:normal;flex-wrap:wrap} /* o nome do rodapé quebra a linha em vez de vazar da tela */
+
+  /* barras de pesquisa: mais baixas e com o texto inteiro numa linha */
+  .barra.safari{padding:7px 10px;gap:8px}
+  .barra.safari .semaforo{gap:5px}
+  .barra.safari .semaforo i{width:9px;height:9px}
+  .safari .busca{padding:5px 22px 5px 8px;gap:5px;font-size:.68rem;letter-spacing:-.01em}
+  .safari .busca svg{flex-basis:11px;width:11px;height:11px}
+  .safari .busca .recarregar{right:7px;width:11px;height:11px}
+  .safari .busca span{overflow:visible;text-overflow:clip}
+  .capa .spotlight{padding:9px 12px;gap:8px;font-size:.8rem;margin-bottom:22px}
+  .capa .spotlight svg{flex-basis:16px;width:16px;height:16px}
+  .capa .spotlight > span{white-space:nowrap}
+
+  /* capa: texto, depois a foto menor com os selos em volta (igual ao computador), depois os botões */
+  .capa-grade{gap:0}
+  .capa-grade > .revelar:first-child{display:contents}
+  .capa .botoes{order:3;margin:26px 0 0}
+  .capa .botao-primario{padding:16px 20px;font-size:.95rem}
+  .capa .botao-link{font-size:.92rem}
+  .foto-hero{order:2;display:block;width:190px;max-width:190px;margin:30px auto 6px}
+  .foto-hero .selos{display:block;margin:0}
+  .foto-hero .selos li{position:absolute;max-width:124px;padding:5px 8px 5px 5px;gap:5px;border-radius:10px;animation:flutuar 6s ease-in-out infinite alternate}
+  .foto-hero .selos .icone{flex:0 0 22px;height:22px;font-size:.7rem}
+  .foto-hero .selos strong{font-size:.7rem}
+  .foto-hero .selos small{font-size:.54rem;line-height:1.2}
+  .foto-hero .selos li:nth-child(1){top:7%;left:-34%}
+  .foto-hero .selos li:nth-child(2){top:21%;right:-34%}
+  .foto-hero .selos li:nth-child(3){bottom:24%;left:-34%}
+  .foto-hero .selos li:nth-child(4){bottom:3%;right:-30%}
+
+  /* sobre mim: foto menor e os três resultados lado a lado */
+  .foto-sobre{max-width:230px;margin:0 auto}
+  .resultados-sobre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+  .resultados-sobre li{min-width:0;padding:9px 8px;border-radius:12px}
+  .resultados-sobre strong{font-size:1.05rem}
+  .resultados-sobre span{font-size:.64rem;line-height:1.25}
+
+  /* black friday: título, vídeos do funil e só depois o cartão amarelo */
+  .bf-grade{gap:0}
+  .bf-grade > .revelar{display:contents}
+  .bf-grade .funil{order:2;margin-top:22px}
+  .bf-grade .chamada-bf{order:3}
+
+  /* galeria: título em três linhas e filtros do mesmo tamanho */
+  #titulo-trabalhos .quebra-celular{display:block}
+  #trabalhos .filtros{display:grid;grid-template-columns:1fr 1fr;gap:6px;width:100%}
+  #trabalhos .filtro{display:flex;align-items:center;justify-content:center;min-height:42px;padding:6px 8px;font-size:.8rem;line-height:1.2;text-align:center}
+  #trabalhos .filtro[data-nicho="todos"]{grid-column:1 / -1}
+}
+
 /* respeita quem prefere menos movimento */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -879,7 +953,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
     </div>
     <div class="conteudo">
       <div class="revelar">
-        <h2 class="titulo-secao" id="titulo-trabalhos">Conteúdo que fala a língua <em class="linha">do seu nicho.</em></h2>
+        <h2 class="titulo-secao" id="titulo-trabalhos">Conteúdo que <span class="quebra-celular">fala a língua</span> <em class="linha">do seu nicho.</em></h2>
         <p class="intro">Escolha o segmento da sua marca e veja como transformo produto em desejo, do primeiro segundo até o clique de compra.</p>
       </div>
       <div class="filtros" id="filtros" role="group" aria-label="Filtrar trabalhos por nicho"></div>
@@ -1032,6 +1106,15 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
     <small>© <span id="ano"></span> Aline Abreu · UGC Creator &amp; Content Strategist</small>
   </div>
 </footer>
+
+<!-- ===================== ABAS DO CELULAR (só aparecem em telas pequenas) ===================== -->
+<nav class="abas-app" aria-label="Atalhos do celular">
+  <a href="#inicio" aria-current="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>Início</a>
+  <a href="#sobre"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Sobre</a>
+  <a href="#contato" class="aba-destaque"><span class="bola"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>Crie comigo</a>
+  <a href="#destaques"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>Resultados</a>
+  <a href="#trabalhos"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Galeria</a>
+</nav>
 
 <!-- ===================== CARD DE CAPTURA (tabela de investimentos) ===================== -->
 <div class="fundo-modal" id="fundo-modal" aria-hidden="true">
@@ -1679,6 +1762,19 @@ $(".topo-explore").addEventListener("click", (e) => {
   if (filtro) filtro.click();
 });
 
+/* abas do celular: acende a aba da seção que está na tela */
+const abasApp = [...document.querySelectorAll(".abas-app a")];
+if ("IntersectionObserver" in window) {
+  const obsAbas = new IntersectionObserver((entradas) => {
+    entradas.forEach(en => {
+      if (!en.isIntersecting) return;
+      const aba = abasApp.find(a => a.getAttribute("href") === "#" + en.target.id);
+      if (aba) abasApp.forEach(a => a.setAttribute("aria-current", String(a === aba)));
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  abasApp.forEach(a => { const alvo = document.querySelector(a.getAttribute("href")); if (alvo) obsAbas.observe(alvo); });
+}
+
 /* contador animado */
 function animarContador(el) {
   const alvo = parseFloat(el.dataset.alvo), casas = parseInt(el.dataset.casas || "0", 10);
@@ -1855,6 +1951,9 @@ const traducoes = {
   "Idioma do site": "Site language",
   "Trabalhe comigo": "Work with me",
   "Crie comigo": "Create with me",
+  "Início": "Home",
+  "Galeria": "Gallery",
+  "Atalhos do celular": "Mobile shortcuts",
   "Resultados": "Results",
   "Abrir menu": "Open menu",
   "Fechar menu": "Close menu",
@@ -1991,6 +2090,8 @@ const traducoes = {
   "Assistir: 99Food, 99Food: promoções e cupons": "Watch: 99Food, 99Food: deals and coupons",
   "ugc creator que já criou para o meu nicho": "ugc creator who has created for my niche",
   "Conteúdo que fala a língua": "Content that speaks the language",
+  "Conteúdo que": "Content that",
+  "fala a língua": "speaks the language",
   "do seu nicho.": "of your niche.",
   "Escolha o segmento da sua marca e veja como transformo produto em desejo, do primeiro segundo até o clique de compra.": "Pick your brand's segment and see how I turn products into desire, from the first second to the purchase click.",
   "Filtrar trabalhos por nicho": "Filter work by niche",
