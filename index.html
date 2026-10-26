@@ -540,9 +540,12 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 @media (min-width:881px){
   .janela{min-height:calc(100vh - 130px);min-height:calc(100svh - 130px);display:flex;flex-direction:column}
   .janela > .conteudo{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:40px;padding-bottom:40px}
-  #fotos .conteudo{padding-top:14px;padding-bottom:14px}
+  #fotos .conteudo{padding-top:40px;padding-bottom:16px} /* mesmo respiro das outras telas acima do título */
+  #fotos .titulo-secao{margin-bottom:14px}
+  #fotos .intro{margin-bottom:22px}
   #trabalhos .conteudo{padding-top:72px} /* mesmo respiro das outras seções entre a barra de pesquisa e o título */
-  #fotos .post-foto{flex-basis:126px}
+  #fotos .post-foto{flex-basis:116px}
+  #fotos .mural{padding:4px 4px 8px}
   /* ajustes para caber com o menu de duas linhas */
   .capa .conteudo{padding-top:14px;padding-bottom:14px}
   .capa h1{font-size:clamp(1.9rem,3.2vw,3.3rem);margin-bottom:14px}
@@ -552,7 +555,6 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
   #sobre p{margin-bottom:.6em}
   #sobre .foto-sobre .midia{min-height:360px}
   #sobre .resultados-sobre{margin-bottom:14px}
-  #fotos .conteudo{padding-top:12px;padding-bottom:12px}
   #contato .conteudo{padding-top:16px;padding-bottom:16px}
   #contato .formulario{gap:5px}
   #contato .campo textarea{min-height:60px}
