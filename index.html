@@ -445,12 +445,13 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 #faq .intro{font-size:.9rem;margin-bottom:16px}
 #faq.janela{min-height:0} /* perguntas frequentes: página curta */
 .faq details{background:var(--papel);border:1px solid var(--linha);border-radius:14px;overflow:hidden}
-.faq details[open]{border-color:rgba(40,59,99,.3)}
-.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;font-family:var(--fonte-titulo);font-weight:800;font-size:.92rem;color:var(--tinta)}
+.faq details[open]{border-color:var(--noite)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;font-family:var(--fonte-titulo);font-weight:800;font-size:.92rem;background:var(--noite);color:#fff} /* barra da pergunta: azul com letra branca */
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--petroleo);color:#fff;font-size:1.3rem;font-weight:700;transition:transform .25s}
+.faq summary:focus-visible{outline:3px solid var(--salmao);outline-offset:-3px} /* contorno de teclado visível sobre o azul */
+.faq summary::after{content:"+";flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--laranja-botao);color:#fff;font-size:1.3rem;font-weight:700;transition:transform .25s}
 .faq details[open] summary::after{transform:rotate(45deg)}
-.faq details p{margin:0;padding:0 18px 14px;color:var(--tinta-suave);font-size:.88rem}
+.faq details p{margin:0;padding:12px 18px 14px;color:var(--tinta-suave);font-size:.88rem}
 
 /* ===================== 8. RODAPÉ ===================== */
 .rodape{padding:0}
