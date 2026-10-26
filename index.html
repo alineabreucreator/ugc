@@ -1817,12 +1817,13 @@ $("#ano").textContent = new Date().getFullYear();
 /* título da capa em bloco (só no computador): cada linha ganha o tamanho de letra
    que faz todas terminarem no mesmo ponto, alinhadas dos dois lados */
 (function () {
-  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")], fraseCapa = $(".capa .frase"), rotuloCapa = $(".capa .rotulo-topo");
+  const titulo = $("#titulo-capa"), linhas = [...titulo.querySelectorAll(".lt")], fraseCapa = $(".capa .frase"), rotuloCapa = $(".capa .rotulo-topo"), buscaCapa = $(".capa .spotlight");
   let pendente = false;
   function ajustarTitulo() {
     pendente = false;
     linhas.forEach(l => l.style.fontSize = "");
     fraseCapa.style.maxWidth = ""; fraseCapa.style.textAlign = "";
+    buscaCapa.style.width = ""; buscaCapa.style.maxWidth = ""; buscaCapa.style.fontSize = ""; buscaCapa.style.whiteSpace = "";
     ["fontSize", "width", "letterSpacing", "marginRight", "textAlign", "textAlignLast"].forEach(p => rotuloCapa.style[p] = "");
     if (innerWidth <= 600) return;
     const base = parseFloat(getComputedStyle(titulo).fontSize);
@@ -1839,6 +1840,18 @@ $("#ano").textContent = new Date().getFullYear();
     /* o texto "Crio conteúdos..." fica com a mesma largura do título, justificado */
     fraseCapa.style.maxWidth = largura(linhas[0]).toFixed(1) + "px";
     fraseCapa.style.textAlign = "justify";
+    /* a busca "ugc creator que faz minha marca vender" também com a largura do título */
+    buscaCapa.style.maxWidth = "none";
+    buscaCapa.style.width = largura(linhas[0]).toFixed(1) + "px";
+    /* a frase digitada cabe numa linha: se faltar espaço, a letra da busca diminui */
+    buscaCapa.style.whiteSpace = "nowrap";
+    const estilo = getComputedStyle(buscaCapa), icone = buscaCapa.querySelector("svg");
+    const livre = buscaCapa.clientWidth - parseFloat(estilo.paddingLeft) - parseFloat(estilo.paddingRight)
+      - (icone ? icone.getBoundingClientRect().width : 0) - parseFloat(estilo.columnGap || 0) - 6;
+    const regua = document.createElement("canvas").getContext("2d");
+    regua.font = `${estilo.fontWeight} ${estilo.fontSize} ${estilo.fontFamily}`;
+    const precisa = regua.measureText(fraseBusca).width;
+    if (precisa > livre) buscaCapa.style.fontSize = (parseFloat(estilo.fontSize) * livre / precisa).toFixed(2) + "px";
     /* a linha "Aline Abreu / UGC Creator..." também vai de ponta a ponta do título:
        a letra fica legível (no mínimo 10px) e o espaço entre as letras é que se ajusta */
     rotuloCapa.style.width = "max-content";
