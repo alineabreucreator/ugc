@@ -732,7 +732,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
 }
 
 .so-celular{display:none}
-.quebra-celular-br{display:none} /* quebras de linha do título da capa que só valem no celular */
+/* quebras de linha do título da capa: quatro linhas no computador e no celular */
 @media (max-width:600px){
   /* nichos saem do topo e vão para o menu, dentro de Trabalhos */
   .topo-explore{height:0;border:0}
@@ -754,7 +754,6 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
   .capa .conteudo{padding-top:22px;padding-bottom:30px}
   .rotulo-topo{font-size:.62rem}
   .capa h1{font-size:1.65rem;margin-bottom:16px}
-  .capa h1 .quebra-celular-br{display:inline}
   .capa .frase{font-size:.92rem;line-height:1.55}
   :is(#sobre,#destaques,#black-friday,#trabalhos,#fotos,#servicos,#contato,#faq) .titulo-secao{font-size:1.4rem;line-height:1.08;margin-bottom:10px}
   :is(#destaques,#black-friday,#trabalhos,#fotos,#servicos,#contato,#faq) .intro{font-size:.85rem;line-height:1.5;margin-bottom:18px}
@@ -879,7 +878,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
             <span><span id="digitando">ugc creator que faz minha marca vender</span><span class="cursor"></span></span>
           </div>
-          <h1 id="titulo-capa">Seu produto é a <br class="quebra-celular-br"><em>escolha ideal</em>. <span class="linha2">Meu conteúdo <br class="quebra-celular-br"><em>mostra o porquê</em>.</span></h1>
+          <h1 id="titulo-capa">Seu produto é a <br class="quebra-titulo"><em>escolha ideal</em>. <span class="linha2">Meu conteúdo <br class="quebra-titulo"><em>mostra o porquê</em>.</span></h1>
           <p class="frase">Crio conteúdos com <strong>olhar criativo e estratégico</strong>, que <strong>geram identificação</strong> e mostram o porquê sua marca é a escolha ideal.</p>
           <div class="botoes">
             <a href="#destaques" class="botao botao-primario">Ver conteúdos que convertem <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
