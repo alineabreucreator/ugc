@@ -936,9 +936,8 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
       <div class="contato-grade">
         <div class="revelar">
           <!--
-            Este formulário mostra a confirmação na tela, mas não envia e-mail sozinho.
-            Para receber as mensagens, crie um formulário grátis no Formspree e
-            troque o envio no script (procure por "ENVIO DO FORMULÁRIO").
+            As mensagens deste formulário e do pop-up chegam no seu e-mail pelo Formspree.
+            O código do formulário fica no script, na constante "formspreeCodigo".
           -->
           <form class="formulario" id="form-contato" novalidate>
             <div class="campo">
@@ -974,6 +973,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
               <p class="erro" id="erro-c-msg"></p>
             </div>
             <p class="aviso-form" id="aviso-contato" role="alert" hidden>Não é possível enviar a mensagem: preencha os campos obrigatórios marcados acima.</p>
+            <p class="aviso-form" id="falha-contato" role="alert" hidden>Não foi possível enviar agora. Tente de novo ou me chame no WhatsApp.</p>
             <div><button type="submit" class="botao botao-primario">Enviar mensagem <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div>
           </form>
           <div class="confirmacao" id="confirmacao-contato" hidden tabindex="-1">
@@ -1064,6 +1064,7 @@ main{padding:130px 0 0} /* barra da Black Friday (42px) + menu (54px) + linha do
             <p class="erro" id="erro-k-whats"></p>
           </div>
         </div>
+        <p class="aviso-form" id="falha-kit" role="alert" hidden>Não foi possível enviar agora. Tente de novo ou me chame no WhatsApp.</p>
         <div><button type="submit" class="botao botao-primario">Quero receber a tabela <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></button></div>
       </form>
       <div class="confirmacao" id="confirmacao-kit" hidden tabindex="-1">
@@ -1722,9 +1723,32 @@ function validar(campos) {
 }
 const preenchido = (v) => v.length > 1;
 
-/* ENVIO DO FORMULÁRIO de contato: hoje só mostra a confirmação.
-   Para receber por e-mail, use fetch("https://formspree.io/f/SEU_CODIGO", { method:"POST", body:new FormData(form) }) aqui. */
-$("#form-contato").addEventListener("submit", (e) => {
+/* ENVIO DOS FORMULÁRIOS pelo Formspree: cole aqui o código do formulário
+   (a parte final do endereço https://formspree.io/f/xxxxxxxx). Vazio = só mostra a confirmação. */
+const formspreeCodigo = "xjyyykgl";
+async function enviarFormulario(form, origem, falha) {
+  falha.hidden = true;
+  if (!formspreeCodigo) return true;
+  const botao = form.querySelector("button[type=submit]");
+  const dados = new FormData(form);
+  dados.append("origem", origem);
+  dados.append("_subject", origem + " | " + (dados.get("marca") || dados.get("nome")));
+  botao.disabled = true;
+  try {
+    const resposta = await fetch("https://formspree.io/f/" + formspreeCodigo, {
+      method: "POST", body: dados, headers: { Accept: "application/json" }
+    });
+    if (!resposta.ok) throw new Error(resposta.status);
+    return true;
+  } catch (err) {
+    falha.hidden = false;
+    return false;
+  } finally {
+    botao.disabled = false;
+  }
+}
+
+$("#form-contato").addEventListener("submit", async (e) => {
   e.preventDefault();
   const ok = validar([
     ["c-nome", preenchido, "Me conta seu nome, por favor."],
@@ -1737,6 +1761,7 @@ $("#form-contato").addEventListener("submit", (e) => {
   /* aviso geral: sem os campos obrigatórios, a mensagem não é enviada */
   $("#aviso-contato").hidden = ok;
   if (!ok) return;
+  if (!(await enviarFormulario(e.target, "Contato pelo site", $("#falha-contato")))) return;
   e.target.hidden = true;
   const conf = $("#confirmacao-contato");
   conf.hidden = false; conf.focus();
@@ -1765,7 +1790,7 @@ document.addEventListener("keydown", (e) => {
     else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
   }
 });
-$("#form-kit").addEventListener("submit", (e) => {
+$("#form-kit").addEventListener("submit", async (e) => {
   e.preventDefault();
   const ok = validar([
     ["k-nome", preenchido, "Me conta seu nome, por favor."],
@@ -1774,6 +1799,7 @@ $("#form-kit").addEventListener("submit", (e) => {
     ["k-whats", (v) => v.replace(/\D/g, "").length >= 10, "Confere o WhatsApp com DDD?"]
   ]);
   if (!ok) return;
+  if (!(await enviarFormulario(e.target, "Pedido da tabela de investimentos", $("#falha-kit")))) return;
   e.target.hidden = true;
   const conf = $("#confirmacao-kit");
   conf.hidden = false; conf.focus();
@@ -2051,6 +2077,7 @@ const traducoes = {
   "Mensagem": "Message",
   "Produto, formato, prazo, objetivo de campanha": "Product, format, deadline, campaign goal",
   "Não é possível enviar a mensagem: preencha os campos obrigatórios marcados acima.": "The message can't be sent: please fill in the required fields marked above.",
+  "Não foi possível enviar agora. Tente de novo ou me chame no WhatsApp.": "It couldn't be sent right now. Please try again or message me on WhatsApp.",
   "Enviar mensagem": "Send message",
   "Mensagem recebida!": "Message received!",
   "Obrigada pelo contato. Já já eu te respondo no e-mail que você deixou.": "Thanks for reaching out. I'll reply to the email you left very soon.",
