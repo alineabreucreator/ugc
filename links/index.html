@@ -83,7 +83,7 @@ img{max-width:100%;display:block}
 /* cartõezinhos laranja em volta da foto, como as notificações da capa do portfólio:
    cada um resume um pedaço da minha apresentação */
 .selos{list-style:none;margin:0;padding:0}
-.selos li{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;max-width:170px;padding:7px 12px 7px 7px;border-radius:13px;
+.selos li{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;padding:7px 12px 7px 7px;border-radius:13px;
   background:var(--laranja-botao);color:#fff;border:1px solid rgba(255,255,255,.25);box-shadow:0 18px 34px -16px rgba(166,63,23,.6);
   text-align:left;animation:flutuar 6s ease-in-out infinite alternate}
 .selos li:nth-child(1){top:16%;left:-26%}
@@ -92,7 +92,7 @@ img{max-width:100%;display:block}
 .selos li:nth-child(4){bottom:11%;right:-26%;animation-delay:-1s}
 .selos .icone{flex:0 0 28px;height:28px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;font-size:.9rem}
 .selos strong{display:block;font-family:var(--fonte-titulo);font-weight:800;font-size:.8rem;line-height:1.15}
-.selos small{display:block;font-size:.68rem;font-weight:600;line-height:1.25}
+.selos small{display:block;font-size:.68rem;font-weight:600;line-height:1.25;white-space:nowrap}
 @keyframes flutuar{to{transform:translateY(-7px)}}
 
 /* ===================== NOME E DESCRIÇÃO ===================== */
@@ -138,14 +138,14 @@ h1.oi .coracao{display:inline-block;animation:bater 1.6s ease-in-out infinite}
   .busca{gap:5px;padding:5px 8px;font-size:clamp(.44rem,2.62vw,.8rem)}
   .busca svg{flex-basis:10px;width:10px;height:10px}
   /* cartõezinhos menores e só nas pontas de cima e de baixo da foto, para não tampar o rosto */
-  .selos li{gap:5px;max-width:118px;padding:4px 8px 4px 4px;border-radius:10px}
+  .selos li{gap:5px;padding:4px 9px 4px 4px;border-radius:10px}
   .selos .icone{flex-basis:20px;height:20px;font-size:.65rem}
   .selos strong{font-size:.64rem}
   .selos small{font-size:.54rem;line-height:1.2}
-  .selos li:nth-child(1){top:1%;left:-20%}
-  .selos li:nth-child(2){top:14%;right:-22%}
-  .selos li:nth-child(3){bottom:15%;left:-22%}
-  .selos li:nth-child(4){bottom:2%;right:-20%}
+  .selos li:nth-child(1){top:22%;left:-22%}
+  .selos li:nth-child(2){top:8%;right:-24%}
+  .selos li:nth-child(3){bottom:30%;left:-24%}
+  .selos li:nth-child(4){bottom:13%;right:-24%}
 }
 @media (max-width:380px){
   .conteudo{padding:26px 18px 22px}
