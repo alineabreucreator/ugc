@@ -130,16 +130,30 @@ h1.oi .coracao{display:inline-block;animation:bater 1.6s ease-in-out infinite}
 .redes a:hover{background:var(--coral);color:#fff;transform:translateY(-2px)}
 .redes svg{width:22px;height:22px;fill:currentColor}
 
-/* no celular a frase da busca quebra em duas linhas em vez de cortar com "..." */
 @media (max-width:480px){
-  .busca{font-size:.72rem;line-height:1.25;padding:5px 10px}
-  .busca span{white-space:normal;overflow:visible;text-align:center}
+  /* frase da busca em uma linha só: semáforo e espaços menores, letra que acompanha a largura da tela */
+  .barra{gap:8px;padding:9px 10px}
+  .semaforo{gap:5px}
+  .semaforo i{width:9px;height:9px}
+  .busca{gap:5px;padding:5px 8px;font-size:clamp(.44rem,2.62vw,.8rem)}
+  .busca svg{flex-basis:10px;width:10px;height:10px}
+  /* cartõezinhos menores e só nas pontas de cima e de baixo da foto, para não tampar o rosto */
+  .selos li{gap:5px;max-width:118px;padding:4px 8px 4px 4px;border-radius:10px}
+  .selos .icone{flex-basis:20px;height:20px;font-size:.65rem}
+  .selos strong{font-size:.64rem}
+  .selos small{font-size:.54rem;line-height:1.2}
+  .selos li:nth-child(1){top:1%;left:-20%}
+  .selos li:nth-child(2){top:14%;right:-22%}
+  .selos li:nth-child(3){bottom:15%;left:-22%}
+  .selos li:nth-child(4){bottom:2%;right:-20%}
 }
 @media (max-width:380px){
   .conteudo{padding:26px 18px 22px}
-  .selos li{max-width:150px;padding-right:10px}
-  .selos strong{font-size:.74rem}
-  .selos small{font-size:.62rem}
+}
+/* celulares bem pequenos: tira a lupa para a frase da busca continuar em uma linha */
+@media (max-width:350px){
+  .busca svg{display:none}
+  .busca{font-size:2.55vw}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
